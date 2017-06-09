@@ -208,6 +208,10 @@
 /obj/structure/bed/chair/wood/New(var/newloc)
 	..(newloc, "wood")
 
+/obj/structure/bed/chair/wood/pew
+	base_icon = "pews"
+	icon_state = "pews"
+
 //King&Cunts
 
 /obj/structure/bed/chair/wood/wings

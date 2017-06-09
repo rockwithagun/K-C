@@ -302,3 +302,46 @@ var/global/chicken_count = 0
 			qdel(src)
 	else
 		processing_objects.Remove(src)
+
+/mob/living/simple_animal/fox
+	name = "fox"
+	desc = "It's a fox. I wonder what it says?"
+	icon_state = "fox"
+	icon_living = "fox"
+	icon_dead = "fox_dead"
+	speak = list("Ack-Ack","Ack-Ack-Ack-Ackawoooo","Purr","Awoo","Tchoff")
+	speak_emote = list("purrs", "barks")
+	emote_hear = list("howls","barks")
+	emote_see = list("shakes its head", "shivers")
+	speak_chance = 1
+	turns_per_move = 5
+	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_amount = 2
+	response_help  = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm   = "kicks"
+	attacktext = "kicked"
+	health = 10
+	pass_flags = PASSTABLE
+	mob_size = MOB_SMALL
+	var/mob/living/simple_animal/mouse/movement_target
+
+/mob/living/simple_animal/deer
+	name = "deer"
+	desc = "It's a deer. It has antlers, so it's a buck."
+	icon_state = "deer"
+	icon_living = "deer"
+	icon_dead = "deer_dead"
+	icon_gib = "deer_dead"
+	speak = null
+	speak_emote = null
+	emote_hear = null
+	emote_see = null
+	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/beef
+	meat_amount = 6
+	response_help  = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm   = "kicks"
+	attacktext = "kicked"
+	health = 50
+	turns_per_move = 5

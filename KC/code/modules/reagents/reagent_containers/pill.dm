@@ -205,7 +205,7 @@
 	icon_state = "opiumm"
 	New()
 		..()
-		reagents.add_reagent("tricord", 20)
+		reagents.add_reagent("tricordrazine", 20)
 
 /obj/item/weapon/reagent_containers/pill/happy
 	name = "Happy pill"

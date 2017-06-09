@@ -15,7 +15,7 @@
 	sealed_levels = list(1,2,3,4)
 	empty_levels = list(4)
 	accessible_z_levels = null
-	base_turf_by_z = list("2" = /turf/simulated/floor/jungle/king,"3" = /turf/simulated/open, "4" = /turf/simulated/open)
+	base_turf_by_z = list("2" = /turf/simulated/floor/jungle/king/,"3" = /turf/simulated/open, "4" = /turf/simulated/open)
 
 	station_name  = "Earth"
 	station_short = "Earth"

@@ -10,3 +10,4 @@
 	icon_state = "wall"
 	density = 1
 	anchored = 1
+

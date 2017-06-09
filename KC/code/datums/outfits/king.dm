@@ -149,6 +149,7 @@
 	gloves = /obj/item/clothing/gloves/thick/combat
 	shoes = /obj/item/clothing/shoes/leather
 	r_pocket = /obj/item/weapon/handcuffs
+	l_pocket = /obj/item/weapon/key/slayer
 	belt = /obj/item/weapon/material/sword/king/longsword/silver
 	l_hand = /obj/item/weapon/gun/launcher/crossbow
 	back = /obj/item/weapon/storage/backpack/messenger

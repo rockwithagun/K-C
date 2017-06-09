@@ -246,7 +246,7 @@
 		return ..()
 
 /obj/structure/reagent_dispensers/beerkeg
-	name = "beer keg"
+	name = "wooden beer keg"
 	desc = "A beer keg."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "beertankTEMP"
