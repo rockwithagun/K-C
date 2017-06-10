@@ -431,7 +431,7 @@
 /client/proc/vampire_bats()
 	set category = "Vampire"
 	set name = "Summon Bats (75)"
-	set desc = "You summon a pair of space bats who attack nearby targets until they or their target is dead."
+	set desc = "You summon a pair of bats who attack nearby targets until they or their target is dead."
 	var/datum/mind/M = usr.mind
 	if(!M) return
 	if(M.current.vampire_power(75, 0))

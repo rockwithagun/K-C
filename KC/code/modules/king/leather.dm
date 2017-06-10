@@ -7,7 +7,7 @@
 		if(!busy)
 			busy = 1
 			if(do_after(user, 50, src)) //Five seconds
-				to_chat(usr, "<font color='red'>You start cutting the hair off the wet leather.</font>")
+				to_chat(usr, "<font color='red'>You cut the hair off the wet leather.</font>")
 				new /obj/item/stack/material/leather(get_turf(src))
 				new /obj/item/stack/material/leather(get_turf(src))
 				new /obj/item/stack/material/leather(get_turf(src))

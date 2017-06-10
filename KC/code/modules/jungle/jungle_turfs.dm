@@ -231,6 +231,10 @@
 	var/overlay_detail
 	has_resources = 1
 
+/turf/simulated/floor/jungle/king/is_plating()
+	return 1
+
+
 /turf/simulated/floor/jungle/king/grass
 	name = "grass"
 	desc = "Thick grass."

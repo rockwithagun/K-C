@@ -48,7 +48,7 @@
 
 //Cargo
 
-/datum/job/mining
+/datum/job/mining/blacksmith
 	title = "Blacksmith"
 	department = "Supply"
 	department_flag = SUP
@@ -58,6 +58,7 @@
 	supervisors = "the Duke"
 	selection_color = "#635C4D"
 	economic_modifier = 5
+	alt_titles = null
 	outfit_type = /decl/hierarchy/outfit/job/blacksmith
 
 /datum/job/mining

@@ -106,7 +106,7 @@
 	response_disarm = "gently pushes aside"
 	response_harm   = "kicks"
 	attacktext = "kicked"
-	health = 50
+	health = 25
 	var/datum/reagents/udder = null
 	var/turns_since_scan = 0
 
@@ -177,6 +177,7 @@
 /mob/living/simple_animal/cow/calf
 	name = "calf"
 	desc = "A cow calf, it doesn't have a gender?"
+	health = 10
 
 /mob/living/simple_animal/cow/calf/New()
 	new /obj/item/weapon/reagent_containers/glass/bottle/robustharvest(get_turf(src))

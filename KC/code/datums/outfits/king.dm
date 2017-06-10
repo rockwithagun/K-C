@@ -26,7 +26,30 @@
 	uniform = /obj/item/clothing/under/king/common3
 	shoes = /obj/item/clothing/shoes/leather
 //	head = /obj/item/clothing/head/king/fancy
-//	gloves = /obj/item/clothing/gloves/thick/combat
+
+/decl/hierarchy/outfit/bard
+	name = "Bard"
+	uniform = /obj/item/clothing/under/king/redcoat
+	shoes = /obj/item/clothing/shoes/leather
+	head = /obj/item/clothing/head/king/generic
+
+/decl/hierarchy/outfit/merchant
+	name = "Merchant"
+	uniform = /obj/item/clothing/under/king/hamilton
+	suit = /obj/item/clothing/suit/king/hamilton
+	shoes = /obj/item/clothing/shoes/leather
+	head = /obj/item/clothing/head/king/fancy
+
+/decl/hierarchy/outfit/maid
+	name = "Maid"
+	uniform = /obj/item/clothing/under/king/maid
+	shoes = /obj/item/clothing/shoes/leather
+
+/decl/hierarchy/outfit/nun
+	name = "Nun"
+	uniform = /obj/item/clothing/under/king/redcoat
+	suit = /obj/item/clothing/suit/nun
+	shoes = /obj/item/clothing/shoes/leather
 
 /decl/hierarchy/outfit/innkeeper
 	name = "Innkeeper"
@@ -57,7 +80,7 @@
 /decl/hierarchy/outfit/job/blacksmith
 	name = "Blacksmith"
 	uniform = /obj/item/clothing/under/king/common1
-	suit = /obj/item/clothing/suit/king/apronwhite
+	suit = /obj/item/clothing/suit/king/apron
 	gloves = /obj/item/clothing/gloves/botanic_leather
 	shoes = /obj/item/clothing/shoes/leather
 	l_hand = /obj/item/weapon/hammer
@@ -129,6 +152,7 @@
 	r_pocket = /obj/item/weapon/handcuffs
 	belt = /obj/item/weapon/material/sword/king/longsword
 	l_pocket = /obj/item/weapon/key/jail
+	r_hand = /obj/item/weapon/key/castle
 
 /decl/hierarchy/outfit/job/security/guard
 	name = "Guard"
@@ -152,6 +176,7 @@
 	l_pocket = /obj/item/weapon/key/slayer
 	belt = /obj/item/weapon/material/sword/king/longsword/silver
 	l_hand = /obj/item/weapon/gun/launcher/crossbow
+	r_hand = /obj/item/weapon/key/castle
 	back = /obj/item/weapon/storage/backpack/messenger
 	backpack_contents = list(/obj/item/weapon/arrow = 6)
 
