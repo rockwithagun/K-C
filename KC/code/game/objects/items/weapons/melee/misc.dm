@@ -71,8 +71,9 @@
 	slot_flags = SLOT_BELT
 	default_material = "iron"
 	force_divisor = 0.3
+	drawsound = 'sound/items/unholster_sword02.ogg'
 
-/obj/item/weapon/material/sword/king/longswordrust
+/obj/item/weapon/material/sword/king/longsword/rust
 	name = "rusty longsword"
 	desc = "A rusted, dull long sword."
 	icon_state = "longswordrust"
@@ -96,6 +97,7 @@
 	edge = 1
 	default_material = "iron"
 	force_divisor = 0.25
+	drawsound = 'sound/items/unholster_sword01.ogg'
 
 /obj/item/weapon/material/sword/king/knife
 	name = "knife"
@@ -109,6 +111,7 @@
 	edge = 1
 	default_material = "iron"
 	force_divisor = 0.072
+	drawsound = 'sound/items/unholster_knife.ogg'
 
 /obj/item/weapon/material/sword/king/rapier
 	name = "rapier"
@@ -122,6 +125,7 @@
 	slot_flags = SLOT_BELT
 	default_material = "iron"
 	force_divisor = 0.3
+	drawsound = 'sound/items/unholster_sword01.ogg'
 
 /obj/item/weapon/material/sword/king/longsword/silver
 	name = "longsword"
