@@ -52,10 +52,11 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "crossbow"
 	item_state = "crossbow-solid"
-	fire_sound = 'sound/weapons/punchmiss.ogg' // TODO: Decent THWOK noise.
+	fire_sound = 'sound/weapons/crossbow.ogg' // TODO: Decent THWOK noise.
 	fire_sound_text = "a solid thunk"
 	fire_delay = 25
 	slot_flags = SLOT_BACK
+	drawsound = 'sound/items/unholster_crossbow.ogg'
 
 	var/obj/item/bolt
 	var/tension = 0                         // Current draw on the bow.
