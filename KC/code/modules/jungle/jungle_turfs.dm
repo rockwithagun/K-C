@@ -161,10 +161,59 @@
 	small_trees = 0 //fucking rivers winning the small tree RNG
 	plants_spawn = 0 //until I get a metric for spawning reeds only
 	reeds_spawn = 1 //get dem reeds boi
-	name = "murky water"
-	desc = "thick, murky water"
+	name = "sea water"
+	desc = "Clear sea water"
 	icon = 'icons/urist/jungle/turfs.dmi'
 	icon_state = "rivernew"
+	var/fishleft = 3 //how many fish are left? todo: replenish this shit over time
+	var/fishing = 0 //are we fishing
+	var/busy = 0
+
+/turf/simulated/floor/jungle/water/deep/New()
+	..()
+	fishleft = rand(1,6)
+
+/turf/simulated/floor/jungle/water/deep/attackby(var/obj/item/I, mob/user as mob)
+	if(istype(I, /obj/item/weapon/fishingrod))
+		if(fishleft && !fishing)
+			if(prob(1))
+				to_chat(user, "<span class='notice'>Cast away, it's time to catch some fucking fish, because why the fuck not.</span>")
+
+			else
+				to_chat(user, "<span class='notice'>You cast your line into the water. Hold still and hopefully you can catch some fish.</span>")
+
+			var/obj/item/weapon/fishingrod/F = I
+			var/fishtime = (rand(40,140)) //test this shit
+			fishtime *= F.fishingpower //here we account for using shitty improvised fishing rods, which increase the time
+			fishing = 1
+
+			if (do_after(user, fishtime, src))
+				to_chat(user, "<span class='notice'>You feel a tug on your line!</span>")
+				src.overlays += image('icons/urist/jungle/turfs.dmi', "exclamation", layer=2.1)	//exclamation mark
+				fishing = 2
+				var/tempfish = fishleft
+				spawn(rand(35,70))
+					if(fishing && fishleft == tempfish)
+						to_chat(user, "<span class='notice'>Looks like it got away...</span>")
+						fishing = 0
+						src.overlays -= image('icons/urist/jungle/turfs.dmi', "exclamation", layer=2.1)
+
+		else if(fishleft && fishing == 2)
+			var/obj/item/F
+
+			if(prob(1))
+				F = new	/obj/item/weapon/beartrap(user.loc)
+			else
+				F = new/obj/item/fish(user.loc)
+
+			src.overlays -= image('icons/urist/jungle/turfs.dmi', "exclamation", layer=2.1)
+			fishleft -= 1
+			fishing = 0
+			user << "<span class='notice'>You yank on your line, pulling up [F]!</span>"
+
+		else if(!fishleft)
+			to_chat(user, "<span class='notice'>You've fished too much in this area, try fishing somewhere else.</span>")
+			return
 
 /turf/simulated/floor/jungle/water/Entered(atom/movable/O)
 	..()
@@ -194,13 +243,10 @@
 	icon_state = "deepnew"
 //	icon_spawn_state = "deepnew"
 
-/turf/simulated/floor/jungle/water/deep/attackby()
-	return
-
 
 /turf/simulated/floor/jungle/water/edge
-	name = "murky water"
-	desc = "thick, murky water"
+	name = "sea water"
+	desc = "Clear sea water"
 	icon = 'icons/urist/jungle/turfs.dmi'
 	icon_state = "test"
 	icon_spawn_state = null

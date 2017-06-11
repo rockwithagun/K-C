@@ -254,6 +254,15 @@
 	initial_reagents = "{'beer':1}"
 	flags = OBJ_CLIMBABLE
 
+/obj/structure/reagent_dispensers/waterkeg
+	name = "wooden keg"
+	desc = "A keg for water."
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "beertankTEMP"
+	amount_per_transfer_from_this = 10
+	initial_reagents = "{'water':1}"
+	flags = OBJ_CLIMBABLE
+
 /obj/structure/reagent_dispensers/virusfood
 	name = "Virus Food Dispenser"
 	desc = "A dispenser of virus food."

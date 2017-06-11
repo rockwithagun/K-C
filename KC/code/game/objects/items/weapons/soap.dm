@@ -89,3 +89,10 @@
 /obj/item/weapon/soap/gold
 	desc = "One true soap to rule them all."
 	icon_state = "soapgold"
+
+/obj/item/weapon/soap/rag
+	name = "cleaning rag"
+	desc = "For cleaning up messes, you suppose."
+	w_class = ITEM_SIZE_TINY
+	icon = 'icons/obj/toy.dmi'
+	icon_state = "rag"

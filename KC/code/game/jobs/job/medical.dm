@@ -1,5 +1,5 @@
 /datum/job/cmo
-	title = "Court Physician"
+	title = "Royal Alchemist"
 	head_position = 1
 	department = "Medical"
 	department_flag = MED|COM

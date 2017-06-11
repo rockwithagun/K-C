@@ -7,6 +7,7 @@
 //	back = /obj/item/weapon/storage/backpack/satchel
 //	belt = /obj/item/weapon/gun/projectile/revolver/mateba
 	r_hand = /obj/item/weapon/key/castle
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/senioradvisor
 	name = "Senior Advisor"
@@ -18,6 +19,7 @@
 //	back = /obj/item/weapon/storage/backpack/satchel
 	belt = /obj/item/weapon/material/sword/king/rapier
 	r_hand = /obj/item/weapon/key/castle
+	back = /obj/item/weapon/storage/backpack/satchel
 
 //CIV
 
@@ -26,12 +28,14 @@
 	uniform = /obj/item/clothing/under/king/common3
 	shoes = /obj/item/clothing/shoes/leather
 //	head = /obj/item/clothing/head/king/fancy
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/bard
 	name = "Bard"
 	uniform = /obj/item/clothing/under/king/redcoat
 	shoes = /obj/item/clothing/shoes/leather
 	head = /obj/item/clothing/head/king/generic
+	back = /obj/item/weapon/storage/backpack/messenger
 
 /decl/hierarchy/outfit/merchant
 	name = "Merchant"
@@ -39,23 +43,27 @@
 	suit = /obj/item/clothing/suit/king/hamilton
 	shoes = /obj/item/clothing/shoes/leather
 	head = /obj/item/clothing/head/king/fancy
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/maid
 	name = "Maid"
 	uniform = /obj/item/clothing/under/king/maid
 	shoes = /obj/item/clothing/shoes/leather
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/nun
 	name = "Nun"
 	uniform = /obj/item/clothing/under/king/redcoat
 	suit = /obj/item/clothing/suit/nun
 	shoes = /obj/item/clothing/shoes/leather
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/innkeeper
 	name = "Innkeeper"
 	uniform = /obj/item/clothing/under/king/common1
 	l_hand = /obj/item/clothing/accessory/wcoat
 	shoes = /obj/item/clothing/shoes/leather
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/farmer
 	name = "Farmer"
@@ -63,11 +71,13 @@
 	shoes = /obj/item/clothing/shoes/leather
 //	head = /obj/item/clothing/head/king/fancy
 	gloves = /obj/item/clothing/gloves/thick/botany
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/job/priest
 	name = "Priest"
 	uniform = /obj/item/clothing/under/rank/chaplain
 	l_hand = /obj/item/weapon/storage/bible
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/butcher
 	name = "Butcher"
@@ -76,6 +86,7 @@
 	shoes = /obj/item/clothing/shoes/leather
 //	head = /obj/item/clothing/head/king/fancy
 	gloves = /obj/item/clothing/gloves/thick/botany
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/job/blacksmith
 	name = "Blacksmith"
@@ -85,6 +96,7 @@
 	shoes = /obj/item/clothing/shoes/leather
 	l_hand = /obj/item/weapon/hammer
 	r_pocket = /obj/item/weapon/key/blacksmith
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/job/miner
 	name = "Miner"
@@ -92,6 +104,7 @@
 	gloves = /obj/item/clothing/gloves/botanic_leather
 	shoes = /obj/item/clothing/shoes/leather
 	l_hand = /obj/item/weapon/pickaxe/silver
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/job/hunter
 	name = "Hunter"
@@ -101,7 +114,7 @@
 	shoes = /obj/item/clothing/shoes/leather
 	belt = /obj/item/weapon/material/sword/king/knife
 	l_hand = /obj/item/weapon/gun/launcher/crossbow
-	back = /obj/item/weapon/storage/backpack/messenger
+	back = /obj/item/weapon/storage/backpack/satchel
 	backpack_contents = list(/obj/item/weapon/arrow = 6)
 
 //ENGI
@@ -114,6 +127,7 @@
 	suit = /obj/item/clothing/suit/king/apron
 	belt = /obj/item/weapon/material/sword/king/knife
 	r_hand = /obj/item/weapon/key/castle
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/job/engineering/builder
 	name = "Builder"
@@ -121,12 +135,14 @@
 	uniform = /obj/item/clothing/under/king/common5
 //	gloves = /obj/item/clothing/gloves/thick
 //	suit = /obj/item/clothing/suit/king/apron
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/job/engineering/lumberjack
 	name = "Woodsmen"
 	uniform = /obj/item/clothing/under/king/common1
 	gloves = /obj/item/clothing/gloves/thick
 	l_hand = /obj/item/weapon/material/twohanded/fireaxe
+	back = /obj/item/weapon/storage/backpack/satchel
 
 //SEC
 
@@ -141,6 +157,7 @@
 	belt = /obj/item/weapon/material/sword/king/longsword
 	r_hand = /obj/item/weapon/key/castle
 	l_hand = /obj/item/weapon/key/jail
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/job/security/jailer
 	name = "Jailer"
@@ -153,6 +170,7 @@
 	belt = /obj/item/weapon/material/sword/king/longsword
 	l_pocket = /obj/item/weapon/key/jail
 	r_hand = /obj/item/weapon/key/castle
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/job/security/guard
 	name = "Guard"
@@ -164,6 +182,7 @@
 	r_pocket = /obj/item/weapon/handcuffs
 	l_pocket = /obj/item/weapon/key/slayer
 	belt = /obj/item/weapon/material/sword/king/longsword
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/job/security/slayer
 	name = "Slayer"
@@ -177,7 +196,7 @@
 	belt = /obj/item/weapon/material/sword/king/longsword/silver
 	l_hand = /obj/item/weapon/gun/launcher/crossbow
 	r_hand = /obj/item/weapon/key/castle
-	back = /obj/item/weapon/storage/backpack/messenger
+	back = /obj/item/weapon/storage/backpack/satchel
 	backpack_contents = list(/obj/item/weapon/arrow = 6)
 
 //DOC
@@ -191,6 +210,7 @@
 	shoes = /obj/item/clothing/shoes/leather
 	belt = /obj/item/weapon/material/sword/king/knife
 	r_hand = /obj/item/weapon/key/castle
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/job/doctorbarber
 	name = "Barber-Surgeon"
@@ -199,6 +219,7 @@
 	gloves = /obj/item/clothing/gloves/botanic_leather
 	shoes = /obj/item/clothing/shoes/leather
 	belt = /obj/item/weapon/material/sword/king/knife
+	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/job/plague
 	name = "Plague Doctor"
@@ -208,4 +229,4 @@
 	mask = /obj/item/clothing/mask/gas/plaguedoctor
 	gloves = /obj/item/clothing/gloves/botanic_leather
 	shoes = /obj/item/clothing/shoes/leather
-
+	back = /obj/item/weapon/storage/backpack/satchel

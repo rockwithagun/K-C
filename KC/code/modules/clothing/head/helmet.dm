@@ -221,10 +221,11 @@
 	desc = "A gold crown.. for a king. Or a Duke I guess."
 	icon_state = "crown"
 	armor = list(melee = 10)
+	body_parts_covered = 0
 
 /obj/item/clothing/head/helmet/king/material/med
 	name = "helmet"
-	desc = "A helmet with an face."
+	desc = "A helmet with no facemask."
 	icon_state = "medhelmet"
 	armor = list(melee = 20)
 	default_material = "silver"
