@@ -30,6 +30,9 @@
 	var/color = "#000000"
 	var/color_weight = 1
 	var/flags = 0
+	var/list/states = list(SOLID = "solidfail", LIQUID = "liquidfail", GAS = "gasfail")
+	var/list/state_change_msg = list(SOLID = "solidifies into a mess.", LIQUID = "liquefies into a muddy color.", GAS = "evaporates into nothing.")
+	var/state_change_ratio = 1
 
 	var/glass_icon = DRINK_ICON_DEFAULT
 	var/glass_name = "something"
@@ -131,3 +134,8 @@
 
 /datum/reagent/proc/reaction_mob(var/mob/target)
 	touch_mob(target)
+
+//Gets the reagent ID for the next state
+
+/datum/reagent/proc/get_changed_reagent(var/state)
+	return states[state]

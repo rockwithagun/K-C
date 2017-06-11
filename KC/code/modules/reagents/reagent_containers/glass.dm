@@ -74,7 +74,7 @@
 
 	afterattack(var/obj/target, var/mob/user, var/proximity)
 
-		if(!is_open_container() || !proximity)
+		if(!is_open_container() || !proximity || (target.flags & NOSPILL))
 			return
 
 		for(var/type in can_be_placed_into)
@@ -198,6 +198,12 @@
 	New()
 		..()
 		reagents.add_reagent("sacid", 60)
+		update_icon()
+
+/obj/item/weapon/reagent_containers/glass/beaker/corporis
+	New()
+		..()
+		reagents.add_reagent("corporis", 60)
 		update_icon()
 
 /obj/item/weapon/reagent_containers/glass/bucket
