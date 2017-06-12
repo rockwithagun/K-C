@@ -6,7 +6,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Pope and the Duke, in that order"
+	supervisors = "the Pope"
 	selection_color = "#515151"
 //	alt_titles = list("Counselor")
 	outfit_type = /decl/hierarchy/outfit/job/chaplain

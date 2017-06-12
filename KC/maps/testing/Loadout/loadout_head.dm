@@ -51,6 +51,3 @@
 	display_name = "Zhan headscarf"
 	path = /obj/item/clothing/head/tajaran/scarf
 	whitelisted = list(SPECIES_TAJARA)
-
-/datum/gear/head/welding
-	allowed_roles = list("Roboticist","Station Engineer","Atmospheric Technician","Chief Engineer")

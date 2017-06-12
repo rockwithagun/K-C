@@ -6,7 +6,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the duke"
+	supervisors = "the Mayor"
 	selection_color = "#026865"
 	req_admin_notify = 1
 	economic_modifier = 10
@@ -21,9 +21,9 @@
 	department_flag = MED
 	faction = "Station"
 	minimal_player_age = 3
-	total_positions = 5
-	spawn_positions = 3
-	supervisors = "the Duke"
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "the Mayor"
 	selection_color = "#013d3b"
 	economic_modifier = 7
 	outfit_type = /decl/hierarchy/outfit/job/doctorbarber
@@ -35,9 +35,9 @@
 	department_flag = MED
 	faction = "Station"
 	minimal_player_age = 0
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "the Duke"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the Mayor"
 	selection_color = "#013d3b"
 	economic_modifier = 5
 	outfit_type = /decl/hierarchy/outfit/job/plague

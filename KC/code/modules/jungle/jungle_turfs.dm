@@ -299,6 +299,13 @@
 	oxygen = MOLES_O2STANDARD
 	nitrogen = MOLES_N2STANDARD
 
+/turf/simulated/floor/jungle/king/cobble/stone
+	name = "stone"
+	desc = "Massive stone slab."
+	icon = 'icons/king/Cobblestone.dmi'
+	icon_state = "slab"
+
+
 obj/effect/decal/jungle/king/grass
 	name = "grass"
 	desc = "Thick grass."

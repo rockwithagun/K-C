@@ -6,7 +6,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the duke"
+	supervisors = "the Mayor"
 	selection_color = "#8e2929"
 	alt_titles = list("Military Adviser", "Field marshal")
 	req_admin_notify = 1
@@ -50,7 +50,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	slayer = 1
-	supervisors = "the Duke"
+	supervisors = "the Mayor"
 	selection_color = "#601b4b"
 	economic_modifier = 4
 	minimal_player_age = 0

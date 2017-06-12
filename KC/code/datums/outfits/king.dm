@@ -18,7 +18,6 @@
 	gloves = /obj/item/clothing/gloves/thick/combat
 //	back = /obj/item/weapon/storage/backpack/satchel
 	belt = /obj/item/weapon/material/sword/king/rapier
-	r_hand = /obj/item/weapon/key/castle
 	back = /obj/item/weapon/storage/backpack/satchel
 
 //CIV
@@ -89,7 +88,7 @@
 	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/job/blacksmith
-	name = "Blacksmith"
+	name = "Gunsmith"
 	uniform = /obj/item/clothing/under/king/common1
 	suit = /obj/item/clothing/suit/king/apron
 	gloves = /obj/item/clothing/gloves/botanic_leather
@@ -120,29 +119,22 @@
 //ENGI
 
 /decl/hierarchy/outfit/job/engineering/foreman
-	name = "Foreman"
+	name = "Worshipful Master"
 	head = /obj/item/clothing/head/king/gus
 	uniform = /obj/item/clothing/under/king/common5
 	gloves = /obj/item/clothing/gloves/thick
 	suit = /obj/item/clothing/suit/king/apron
 	belt = /obj/item/weapon/material/sword/king/knife
-	r_hand = /obj/item/weapon/key/castle
 	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/job/engineering/builder
-	name = "Builder"
+	name = "Mason"
 //	head = /obj/item/clothing/head/hardhat/white
 	uniform = /obj/item/clothing/under/king/common5
 //	gloves = /obj/item/clothing/gloves/thick
 //	suit = /obj/item/clothing/suit/king/apron
 	back = /obj/item/weapon/storage/backpack/satchel
 
-/decl/hierarchy/outfit/job/engineering/lumberjack
-	name = "Woodsmen"
-	uniform = /obj/item/clothing/under/king/common1
-	gloves = /obj/item/clothing/gloves/thick
-	l_hand = /obj/item/weapon/material/twohanded/fireaxe
-	back = /obj/item/weapon/storage/backpack/satchel
 
 //SEC
 
@@ -155,7 +147,6 @@
 	shoes = /obj/item/clothing/shoes/leather
 	r_pocket = /obj/item/weapon/handcuffs
 	belt = /obj/item/weapon/material/sword/king/longsword
-	r_hand = /obj/item/weapon/key/castle
 	l_hand = /obj/item/weapon/key/jail
 	back = /obj/item/weapon/storage/backpack/satchel
 
@@ -195,21 +186,19 @@
 	l_pocket = /obj/item/weapon/key/slayer
 	belt = /obj/item/weapon/material/sword/king/longsword/silver
 	l_hand = /obj/item/weapon/gun/launcher/crossbow
-	r_hand = /obj/item/weapon/key/castle
 	back = /obj/item/weapon/storage/backpack/satchel
 	backpack_contents = list(/obj/item/weapon/arrow = 6)
 
 //DOC
 
 /decl/hierarchy/outfit/job/courtphysician
-	name = "Court Physician"
+	name = "Royal Alchemist"
 	uniform = /obj/item/clothing/under/king/heir2
 	suit = /obj/item/clothing/suit/storage/hooded/wintercoat/cloak
 	head = /obj/item/clothing/head/king/fancy
 	gloves = /obj/item/clothing/gloves/botanic_leather
 	shoes = /obj/item/clothing/shoes/leather
 	belt = /obj/item/weapon/material/sword/king/knife
-	r_hand = /obj/item/weapon/key/castle
 	back = /obj/item/weapon/storage/backpack/satchel
 
 /decl/hierarchy/outfit/job/doctorbarber

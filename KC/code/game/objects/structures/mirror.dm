@@ -1,7 +1,7 @@
 //wip wip wup
 /obj/structure/mirror
 	name = "mirror"
-	desc = "A SalonPro Nano-Mirror(TM) brand mirror! The leading technology in hair salon products, utilizing nano-machinery to style your hair just right."
+	desc = "A mirror."
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "mirror"
 	density = 0
@@ -17,7 +17,7 @@
 		var/datum/nano_module/appearance_changer/AC = ui_users[user]
 		if(!AC)
 			AC = new(src, user)
-			AC.name = "SalonPro Nano-Mirror&trade;"
+			AC.name = "Mirror;"
 			ui_users[user] = AC
 		AC.ui_interact(user)
 
@@ -100,7 +100,7 @@
 
 /obj/item/weapon/mirror
 	name = "mirror"
-	desc = "A SalonPro Nano-Mirror(TM) brand mirror! Now a portable version."
+	desc = "A portable mirror."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "mirror"
 	var/list/ui_users = list()
@@ -110,7 +110,7 @@
 		var/datum/nano_module/appearance_changer/AC = ui_users[user]
 		if(!AC)
 			AC = new(src, user)
-			AC.name = "SalonPro Nano-Mirror&trade;"
+			AC.name = "Mirror;"
 			AC.flags = APPEARANCE_HAIR
 			ui_users[user] = AC
 		AC.ui_interact(user)

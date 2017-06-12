@@ -1,7 +1,7 @@
 var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
 /datum/job/captain
-	title = "Duke"
+	title = "Mayor"
 	department = "Command"
 	head_position = 1
 	department_flag = COM
@@ -29,13 +29,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
 
 /datum/job/hop
-	title = "Senior Advisor"
+	title = "Mayor Advisor"
 	head_position = 1
 	department_flag = COM|CIV
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the duke"
+	supervisors = "the Mayor"
 	selection_color = "#2f2f7f"
 	req_admin_notify = 1
 	minimal_player_age = 14

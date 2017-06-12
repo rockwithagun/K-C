@@ -13,3 +13,19 @@
 	icon_state = "mason"
 	anchored = 1
 	density = 0
+
+obj/effect/decal/jungle/king/flower
+	name = "flowers"
+	desc = "flowers."
+	icon = 'icons/king/misc.dmi'
+	icon_state = "multiflower"
+	layer = -997
+
+obj/effect/decal/jungle/king/flower/pink
+	icon_state = "pinkflower"
+
+obj/effect/decal/jungle/king/flower/blue
+	icon_state = "blueflower"
+
+obj/effect/decal/jungle/king/flower/yellow
+	icon_state = "yellowflower"

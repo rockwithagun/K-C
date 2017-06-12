@@ -255,12 +255,21 @@
 	flags = OBJ_CLIMBABLE
 
 /obj/structure/reagent_dispensers/waterkeg
-	name = "wooden keg"
+	name = "wooden water keg"
 	desc = "A keg for water."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "beertankTEMP"
 	amount_per_transfer_from_this = 10
 	initial_reagents = "{'water':1}"
+	flags = OBJ_CLIMBABLE
+
+/obj/structure/reagent_dispensers/winekeg
+	name = "wooden wine keg"
+	desc = "A keg for wine."
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "beertankTEMP"
+	amount_per_transfer_from_this = 10
+	initial_reagents = "{'wine':1}"
 	flags = OBJ_CLIMBABLE
 
 /obj/structure/reagent_dispensers/virusfood
