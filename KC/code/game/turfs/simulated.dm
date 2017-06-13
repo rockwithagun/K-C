@@ -127,17 +127,15 @@
 				bloodDNA = null
 
 			//Shoe sounds
-			if 		(istype(src, /turf/simulated/floor/grass))
+			if 		(istype(src, /turf/simulated/floor/jungle/king/grass))
 				footstepsound = "grassfootsteps"
-			//else 	if(istype(src, /turf/stalker/floor/tropa))//Not needed for now.
-			//	footstepsound = "sandfootsteps"
 			else 	if(istype(src, /turf/simulated/floor/beach/water))
 				footstepsound = "waterfootsteps"
 			else 	if(istype(src, /turf/simulated/floor/wood))
 				footstepsound = "woodfootsteps"
 			else 	if(istype(src, /turf/simulated/floor/carpet))
 				footstepsound = "carpetfootsteps"
-			else 	if(istype(src, /turf/simulated/floor/beach/sand))
+			else 	if(istype(src, /turf/simulated/floor/jungle/king))
 				footstepsound = "dirtfootsteps"
 			else
 				footstepsound = "erikafootsteps"
