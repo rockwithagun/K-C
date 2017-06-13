@@ -172,7 +172,10 @@
 		/obj/item/ammo_casing/shotgun/stunshell = "12 gauge",
 		/obj/item/ammo_casing/shotgun/flash     = "12 gauge",
 		/obj/item/ammo_casing/a762              = "7.62mm",
-		/obj/item/ammo_casing/a556              = "5.56mm"
+		/obj/item/ammo_casing/a556              = "5.56mm",
+		/obj/item/ammo_casing/king              = "balllong",
+		/obj/item/ammo_casing/king/short        = "ballshort",
+		/obj/item/ammo_casing/king/flintlock    = "ballflintlock"
 		)
 
 /obj/item/weapon/gun/projectile/pirate/New()

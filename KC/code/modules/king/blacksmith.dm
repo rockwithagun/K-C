@@ -82,6 +82,10 @@
 	center_of_mass = "x=17;y=16"
 	attack_verb = list("bashed", "battered", "bludgeoned", "whacked")
 
+/obj/item/weapon/hammer/smithing
+	name = "smithing hammer"
+	desc = "Hmm it's shaped like a hammer, I wonder what it could be?"
+	icon_state = "hammers"
 
 //THANKS ZUHAYR FOR CRAFTING CODE
 //
@@ -93,9 +97,7 @@ var/list/techniques = list(
 	"Knife" = list("path" = /obj/item/weapon/material/sword/king/knife, "cost" = 3),
 	"Pickaxe" = list("path" = /obj/item/weapon/pickaxe/silver, "cost" = 7),
 	"Axe" = list("path" = /obj/item/weapon/material/twohanded/fireaxe, "cost" = 10),
-	"Rapier" = list("path" = /obj/item/weapon/material/sword/king/rapier, "cost" = 7),
-	"Helmet" = list("path" = /obj/item/clothing/head/helmet/king/material/heavy, "cost" = 15),
-	"Armour" = list("path" = /obj/item/clothing/suit/armor/king/material/heavy, "cost" = 40)
+	"Rapier" = list("path" = /obj/item/weapon/material/sword/king/rapier, "cost" = 7)
 	)
 
 

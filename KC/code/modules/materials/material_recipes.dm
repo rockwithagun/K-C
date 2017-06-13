@@ -112,6 +112,10 @@ material/wood/generate_recipes()
 	recipes += new/datum/stack_recipe("key", /obj/item/weapon/key, 1, time = 10, one_per_turf = 0, on_floor = 1)
 	recipes += new/datum/stack_recipe("table frame", /obj/structure/table, 1, time = 10, one_per_turf = 1, on_floor = 1)
 	recipes += new/datum/stack_recipe("rack", /obj/structure/table/rack, 1, time = 5, one_per_turf = 1, on_floor = 1)
+	recipes += new/datum/stack_recipe("long rifle stock", /obj/item/weapon/gunsmith/stock/long, 7, time = 10)
+	recipes += new/datum/stack_recipe("short rifle stock", /obj/item/weapon/gunsmith/stock/short, 5, time = 10)
+	recipes += new/datum/stack_recipe("flintlock stock", /obj/item/weapon/gunsmith/stock/flintlock, 3, time = 10)
+
 
 /material/leather/generate_recipes()
 	..()

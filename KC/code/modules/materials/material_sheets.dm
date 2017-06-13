@@ -82,8 +82,14 @@
 	else if(istype(W, /obj/item/stack/rods))
 		material.build_rod_product(user, W, src)
 		return
-	else if(istype(W, /obj/item/weapon/hammer))
+	else if(istype(W, /obj/item/weapon/hammer/smithing))
 		metal_technique(user, W, src)
+		return
+	return ..()
+
+/obj/item/stack/material/iron/attackby(var/obj/item/W, var/mob/user)
+	if(istype(W, /obj/item/weapon/hammer))
+		gun_technique(user, W, src)
 		return
 	return ..()
 

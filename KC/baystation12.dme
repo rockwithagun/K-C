@@ -1419,6 +1419,8 @@
 #include "code\modules\king\blacksmith.dm"
 #include "code\modules\king\dock.dm"
 #include "code\modules\king\fishing.dm"
+#include "code\modules\king\guns.dm"
+#include "code\modules\king\gunsmith.dm"
 #include "code\modules\king\helmet.dm"
 #include "code\modules\king\jail.dm"
 #include "code\modules\king\keys.dm"
