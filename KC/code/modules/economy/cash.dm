@@ -45,9 +45,9 @@
 		return list(icon_state)
 
 /obj/item/weapon/spacecash/bundle
-	name = "pile of thalers"
+	name = "pile of dollars"
 	icon_state = ""
-	desc = "They are worth 0 Thalers."
+	desc = "They are worth 0 dollars."
 	worth = 0
 
 /obj/item/weapon/spacecash/bundle/getMoneyImages()
@@ -76,11 +76,11 @@
 		banknote.transform = M
 		src.overlays += banknote
 
-	src.desc = "They are worth [worth] Thalers."
+	src.desc = "They are worth [worth] dollars."
 	if(worth in denominations)
-		src.name = "[worth] Thaler"
+		src.name = "[worth] dollar"
 	else
-		src.name = "pile of [worth] thalers"
+		src.name = "pile of [worth] dollars"
 
 	if(overlays.len <= 2)
 		w_class = ITEM_SIZE_TINY
@@ -88,7 +88,7 @@
 		w_class = ITEM_SIZE_SMALL
 
 /obj/item/weapon/spacecash/bundle/attack_self()
-	var/amount = input(usr, "How many Thalers do you want to take? (0 to [src.worth])", "Take Money", 20) as num
+	var/amount = input(usr, "How many dollars do you want to take? (0 to [src.worth])", "Take Money", 20) as num
 	amount = round(Clamp(amount, 0, src.worth))
 	if(amount==0) return 0
 
@@ -115,45 +115,45 @@
 	worth = 1
 
 /obj/item/weapon/spacecash/bundle/c10
-	name = "10 Thaler"
+	name = "10 dollars"
 	icon_state = "spacecash10"
-	desc = "It's worth 10 Thalers."
+	desc = "It's worth 10 dollars."
 	worth = 10
 
 /obj/item/weapon/spacecash/bundle/c20
-	name = "20 Thaler"
+	name = "20 dollars"
 	icon_state = "spacecash20"
-	desc = "It's worth 20 Thalers."
+	desc = "It's worth 20 dollars."
 	worth = 20
 
 /obj/item/weapon/spacecash/bundle/c50
-	name = "50 Thaler"
+	name = "50 dollars"
 	icon_state = "spacecash50"
-	desc = "It's worth 50 Thalers."
+	desc = "It's worth 50 dollars."
 	worth = 50
 
 /obj/item/weapon/spacecash/bundle/c100
-	name = "100 Thaler"
+	name = "100 dollars"
 	icon_state = "spacecash100"
-	desc = "It's worth 100 Thalers."
+	desc = "It's worth 100 dollars."
 	worth = 100
 
 /obj/item/weapon/spacecash/bundle/c200
-	name = "200 Thaler"
+	name = "200 dollars"
 	icon_state = "spacecash200"
-	desc = "It's worth 200 Thalers."
+	desc = "It's worth 200 dollars."
 	worth = 200
 
 /obj/item/weapon/spacecash/bundle/c500
-	name = "500 Thaler"
+	name = "500 dollars"
 	icon_state = "spacecash500"
-	desc = "It's worth 500 Thalers."
+	desc = "It's worth 500 dollars."
 	worth = 500
 
 /obj/item/weapon/spacecash/bundle/c1000
-	name = "1000 Thaler"
+	name = "1000 dollars"
 	icon_state = "spacecash1000"
-	desc = "It's worth 1000 Thalers."
+	desc = "It's worth 1000 dollars"
 	worth = 1000
 
 proc/spawn_money(var/sum, spawnloc, mob/living/carbon/human/human_user as mob)

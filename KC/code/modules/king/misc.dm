@@ -29,3 +29,11 @@ obj/effect/decal/jungle/king/flower/blue
 
 obj/effect/decal/jungle/king/flower/yellow
 	icon_state = "yellowflower"
+
+/obj/structure/boat
+	name = "half buried boat"
+	desc = "An old row boat leave out to rot and sink into the ground."
+	icon = 'icons/king/boat.dmi'
+	icon_state = "wreckedboat"
+	anchored = 1
+	density = 0

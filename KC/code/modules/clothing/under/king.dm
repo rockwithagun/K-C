@@ -54,6 +54,14 @@
 	item_state = "w_suit"
 	has_sensor = 0
 
+/obj/item/clothing/under/king/mayor
+	name = "duke outfit"
+	desc = "An outfit only suitable for a mayor."
+	icon_state = "mayor"
+	worn_state = "mayor"
+	item_state = "w_suit"
+	has_sensor = 0
+
 /obj/item/clothing/under/king/maid
 	name = "maid dress"
 	desc = "A black and white maid dress. Don't get this dirty too."

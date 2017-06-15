@@ -37,24 +37,3 @@ var/datum/antagonist/actor/actor
 	player.equip_to_slot_or_del(C,slot_wear_id)
 
 	return 1
-
-/client/verb/join_as_actor()
-	set category = "IC"
-	set name = "Join as Actor"
-	set desc = "Join as an Actor to entertain the crew through television!"
-
-	if(!MayRespawn(1))
-		return
-
-	var/choice = alert("Are you sure you'd like to join as an actor?", "Confirmation","Yes", "No")
-	if(choice != "Yes")
-		return
-
-	if(isghostmind(usr.mind) || isnewplayer(usr))
-		if(actor.current_antagonists.len >= actor.hard_cap)
-			to_chat(usr, "No more actors may spawn at the current time.")
-			return
-		actor.create_default(usr)
-		return
-
-	to_chat(usr, "You must be observing or be a new player to spawn as an actor.")

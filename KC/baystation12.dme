@@ -1428,6 +1428,7 @@
 #include "code\modules\king\misc.dm"
 #include "code\modules\king\oven.dm"
 #include "code\modules\king\pit.dm"
+#include "code\modules\king\scissors.dm"
 #include "code\modules\king\antagonist\vampire.dm"
 #include "code\modules\king\gamemode\vampire\vampire.dm"
 #include "code\modules\king\gamemode\vampire\vampire_powers.dm"

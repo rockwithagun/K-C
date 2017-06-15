@@ -506,13 +506,20 @@
 	desc = "A simple coat worn by infantrymen."
 	icon_state = "redcoat"
 	item_state = "redcoat"
-	armor = list(melee = 15, bullet = 5, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 20, bullet = 15, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/king/hamilton
 	name = "blue coat"
 	desc = "A blue coat sporting gold buttons."
 	icon_state = "hamilton"
 	item_state = "hamilton"
+	armor = list(melee = 15, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/king/mayor
+	name = "mayor's coat"
+	desc = "A brown leather coat."
+	icon_state = "mayor"
+	item_state = "mayor"
 	armor = list(melee = 15, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/king/apron

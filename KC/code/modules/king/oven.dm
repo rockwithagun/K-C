@@ -64,6 +64,20 @@
 			busy = 0
 			update_icon()
 
+	else if(istype(W, /obj/item/weapon/reagent_containers/food/snacks/fishmeat))
+		if(!busy)
+			busy = 1
+			update_icon()
+			user.drop_item(W)
+			playsound(loc, 'sound/king/furnace.ogg', 100, 5, 5)
+			qdel(W)
+			sleep(150)
+			visible_message("<span class='notice'>The meat finished cooking.</span>")
+			var/obj/item/weapon/reagent_containers/food/snacks/meatsteak/I = new()
+			I.forceMove(get_turf(src))
+			busy = 0
+			update_icon()
+
 
 	else if(istype(W, /obj/item/weapon/reagent_containers/food/snacks/snacks/king/flour))
 		if(!busy)

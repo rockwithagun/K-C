@@ -328,3 +328,11 @@
 	item_state = "gus"
 	siemens_coefficient = 0.9
 	body_parts_covered = 0
+
+/obj/item/clothing/head/king/mayor
+	name = "mayor hat"
+	desc = "A leather top hat."
+	icon_state = "mayor"
+	item_state = "mayor"
+	siemens_coefficient = 0.9
+	body_parts_covered = 0

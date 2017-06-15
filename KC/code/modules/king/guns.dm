@@ -77,3 +77,19 @@
 	item_state = "mosin"
 	caliber = "ballflintlock"
 	ammo_type = /obj/item/ammo_casing/king
+
+//
+
+/obj/item/weapon/storage/bullet
+	name = "bullet bag"
+	desc = "Leather bag for holding all the bullets you could need."
+	icon = 'icons/king/gunsmith.dmi'
+	icon_state = "bag"
+	slot_flags = SLOT_BELT
+	max_storage_space = 200
+	max_w_class = ITEM_SIZE_NORMAL
+	w_class = ITEM_SIZE_LARGE
+	can_hold = list(/obj/item/ammo_casing/king, /obj/item/ammo_casing/king/short, /obj/item/ammo_casing/king/flintlock)
+	allow_quick_gather = 1
+	allow_quick_empty = 1
+	use_to_pickup = 1

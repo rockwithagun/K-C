@@ -130,7 +130,7 @@
 		if("active_diseases")
 			return global.active_diseases;
 		if("actor")
-			return global.actor;
+			return global.actor
 		if("additional_antag_types")
 			return global.additional_antag_types;
 		if("adjectives")

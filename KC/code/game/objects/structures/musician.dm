@@ -6,9 +6,10 @@
 	var/tempo = 5
 
 /obj/structure/device/piano
-	name = "space minimoog"
+	name = "piano"
+	desc = "This is a piano, like a regular piano."
 	icon = 'icons/obj/musician.dmi'
-	icon_state = "minimoog"
+	icon_state = "piano"
 	anchored = 1
 	density = 1
 	var/datum/song/song
@@ -16,16 +17,6 @@
 	var/help = 0
 	var/edit = 1
 	var/repeat = 0
-
-/obj/structure/device/piano/New()
-	if(prob(50))
-		name = "space minimoog"
-		desc = "This is a minimoog, like a space piano, but more spacey!"
-		icon_state = "minimoog"
-	else
-		name = "space piano"
-		desc = "This is a space piano, like a regular piano, but always in tune! Even if the musician isn't."
-		icon_state = "piano"
 
 /obj/structure/device/piano/proc/playnote(var/note as text)
 //	log_debug("Note: [note]")

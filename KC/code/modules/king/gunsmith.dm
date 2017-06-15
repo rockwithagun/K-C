@@ -81,7 +81,10 @@ var/list/guntechniques = list(
 	"long rifle barrel" = list("path" = /obj/item/weapon/gunsmith/barrel/long,  "cost" = 15),
 	"short rifle barrel" = list("path" = /obj/item/weapon/gunsmith/barrel/short, "cost" = 12),
 	"flintlock barrel" = list("path" = /obj/item/weapon/gunsmith/barrel/flintlock, "cost" = 10),
-	"gun parts" = list("path" = /obj/item/weapon/gunsmith/parts, "cost" = 5)
+	"gun parts" = list("path" = /obj/item/weapon/gunsmith/parts, "cost" = 5),
+	"long rifle shot" = list("path" = /obj/item/ammo_casing/king, "cost" = 1),
+	"short rifle shot" = list("path" = /obj/item/ammo_casing/king/short, "cost" = 1),
+	"flintlock shot" = list("path" = /obj/item/ammo_casing/king/flintlock, "cost" = 1)
 	)
 
 /obj/item/stack/material/iron/proc/gun_technique(var/mob/user)
@@ -96,7 +99,7 @@ var/list/guntechniques = list(
 		user << "There is not enough material in this stack to make that."
 		return
 
-	if(!do_after(user, 150, src))
+	if(!do_after(user, 100, src))
 		return
 
 	var/building_path = build_data["path"]

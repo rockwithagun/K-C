@@ -14,6 +14,6 @@
 	key_data = "c"
 
 /obj/item/weapon/key/blacksmith
-	name = "blacksmith's key"
-	desc = "Used to unlock the blacksmith's backroom."
+	name = "gunsmith's key"
+	desc = "Used to unlock the gunsmith's backroom."
 	key_data = "d"
