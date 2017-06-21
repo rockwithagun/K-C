@@ -30,6 +30,10 @@
 	var/color = "#000000"
 	var/color_weight = 1
 	var/flags = 0
+	var/list/states = MAGNUM_OPUS //Provide reagent ids in associated lists. (METHOD = ID)
+	var/state_req_power = 1
+	var/list/state_change_msg = MAGNUM_OPUS //Same as the two above (METHOD = string)
+	var/state_change_ratio = 1
 
 	var/glass_icon = DRINK_ICON_DEFAULT
 	var/glass_name = "something"
@@ -131,3 +135,18 @@
 
 /datum/reagent/proc/reaction_mob(var/mob/target)
 	touch_mob(target)
+
+//Uses some dark magic to change the chemical no matter the destination
+
+/datum/reagent/proc/change_state(var/obj/item/weapon/reagent_containers/output, var/target_state, var/strength)
+	..()
+	var/obj/item/weapon/reagent_containers/O = holder.my_atom
+	if(target_state in src.states)
+		if(strength >= state_req_power)
+			id = states[target_state]
+			holder.trans_id_to(output, id, volume)
+			O.visible_message("\icon[O]<span class ='notice'>The [name] [state_change_msg[target_state]]</span>")
+		else
+			O.visible_message("\icon[O]<span class ='danger'>The [name] bubbles slightly, but doesn't seem to change.")
+	else
+		O.visible_message("\icon[O]<span class ='danger'>The [name] doesn't seem to change.")
