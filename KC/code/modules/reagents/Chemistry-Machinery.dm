@@ -522,30 +522,28 @@
 	desc = "Tools for alchemy."
 	icon = 'icons/obj/machinery/alchemy.dmi'
 	icon_state = "alembic"
-	var/obj/item/weapon/reagent_containers/glass/input_beaker = null
-	var/obj/item/weapon/reagent_containers/glass/output_beaker = null
-	var/conversion_state
+	var/obj/item/weapon/reagent_containers/input_beaker = null
+	var/obj/item/weapon/reagent_containers/output_beaker = null
 	var/target_state
 	var/working = 0
 	var/strength = 1
-	var/processingtime = 6 SECONDS
+	var/processing_time = 6 SECONDS
 	flags = NOSPILL
 
 /obj/machinery/alchemy/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(istype(O, /obj/item/weapon/reagent_containers/glass))
-		var/obj/item/weapon/reagent_containers/glass/B = O
-		if(!input_beaker && !output_beaker)
-			var/beakerloc = input("Where do you want to put the beaker?","Beaker Locations:") in list("Input","Output")
+	if(istype(O, /obj/item/weapon/reagent_containers))
+		var/obj/item/weapon/reagent_containers/B = O
+		if(!input_beaker && !output_beaker) //Still need to refactor all this
+			var/beakerloc = input("Where do you want to put the beaker?","Beaker Locations") in list("Input","Output")
 			add_beaker(B, beakerloc, user)
 		else if(input_beaker && !output_beaker)
 			add_beaker(B, "Output", user)
-		else if(!input_beaker && output_beaker)
+		else if(!input_beaker)
 			add_beaker(B, "Input", user)
 		if(input_beaker && output_beaker)
-			for(var/datum/reagent/beakerchem in input_beaker.reagents.reagent_list)
-				if(beakerchem.reagent_state == conversion_state)
-					working = 1
-					change_state(beakerchem, strength)
+			working = 1
+			process_reagents(input_beaker, output_beaker)
+			working = 0
 	return
 
 /obj/machinery/alchemy/attack_hand(mob/user as mob)
@@ -553,7 +551,7 @@
 		to_chat(user, "There's a transition in progress.")
 		return
 	if(input_beaker && output_beaker)
-		var/beakerloc = input("Which beaker do you want to remove?","Beaker Locations:") in list("Input","Output")
+		var/beakerloc = input("Which beaker do you want to remove?","Beaker Locations") in list("Input","Output")
 		remove_beaker(beakerloc)
 	else if(input_beaker && !output_beaker)
 		remove_beaker("Input")
@@ -565,82 +563,64 @@
 /obj/machinery/alchemy/proc/remove_beaker(var/beakerloc)
 	switch(beakerloc)
 		if("Input")
-			input_beaker.loc = src.loc
+			input_beaker.dropInto(loc)
 			input_beaker = null
 		if("Output")
-			output_beaker.loc = src.loc
+			output_beaker.dropInto(loc)
 			output_beaker = null
 	update_icon()
 
-/obj/machinery/alchemy/proc/add_beaker(var/obj/item/weapon/reagent_containers/glass/B, var/beakerloc, var/mob/user as mob)
+/obj/machinery/alchemy/proc/add_beaker(var/obj/item/weapon/reagent_containers/B, var/beakerloc, var/mob/user as mob)
 	switch(beakerloc)
 		if("Input")
 			if(input_beaker)
 				to_chat(user, "There's already a beaker there.")
 				return
 			user.drop_item()
-			input_beaker = B
 			B.loc = src
+			input_beaker = B
 		if("Output")
 			if(output_beaker)
 				to_chat(user, "There's already a beaker there.")
 				return
 			user.drop_item()
-			output_beaker = B
 			B.loc = src
+			output_beaker = B
 	update_icon()
 
-/obj/machinery/alchemy/proc/change_state(var/datum/reagent/inputchem) //Move this to the /datum/reagent instead?
-	..()
-	spawn(processingtime)
-		output_beaker.reagents.add_reagent(inputchem.get_changed_reagent(target_state), inputchem.volume*inputchem.state_change_ratio)
-		src.visible_message("\icon[src] The [inputchem.name] [inputchem.state_change_msg[target_state]]")
-		inputchem.remove_self(inputchem.volume)
-		working = 0 //Another less then optimal thing to refactor later
+/obj/machinery/alchemy/proc/process_reagents(var/obj/item/weapon/reagent_containers/input, var/obj/item/weapon/reagent_containers/output)
+	for(var/datum/reagent/beaker_reagent in input.reagents.reagent_list)
+		sleep(processing_time / input.reagents.reagent_list.len)
+		beaker_reagent.change_state(output, target_state, strength)
+		//src.visible_message("\icon[src] <span class ='notice'>The [beaker_reagent] [beaker_reagent.state_change_msg[target_state]]</span>")
+	return
 
-//Most of these need to be named at some point
-
-/obj/machinery/alchemy/liqtosol
-	conversion_state = LIQUID
-	target_state = SOLID
-
-/obj/machinery/alchemy/gastosol
-	conversion_state = GAS
-	target_state = SOLID
+/obj/machinery/alchemy/condenser
+	name = "condenser"
+	icon_state = "condenser"
+	target_state = CONGELATION
+	processing_time = 12 SECONDS
 
 /obj/machinery/alchemy/alembic
 	name = "alembic"
 	icon_state = "alembic"
-	conversion_state = SOLID
-	target_state = LIQUID
-
-/obj/machinery/alchemy/gastoliq
-	conversion_state = GAS
-	target_state = LIQUID
+	target_state = DISTILLATION
 
 /obj/machinery/alchemy/aludel
 	name = "aludel"
 	icon_state = "aludel"
-	conversion_state = SOLID
-	target_state = GAS
+	target_state = FILTRATION
 
 /obj/machinery/alchemy/retort
 	name = "retort"
 	icon_state = "retort"
-	conversion_state = LIQUID
-	target_state = GAS
+	target_state = DISTILLATION
 
-/obj/machinery/alchemy/athanor
+/obj/machinery/athanor
 	name = "athanor"
+	icon = 'icons/obj/machinery/alchemy.dmi'
 	icon_state = "athanor"
-	conversion_state = SOLID
-	target_state = SOLID
-	processingtime = 30 SECONDS
+	density = 1
+	anchored = 1
 
-/obj/machinery/alchemy/liqtoliq
-	conversion_state = LIQUID
-	target_state = LIQUID
-
-/obj/machinery/alchemy/gastogas
-	conversion_state = GAS
-	target_state = GAS
+/obj/machinery/athanor/attackby(var/obj/item/O as obj, var/mob/user as mob)

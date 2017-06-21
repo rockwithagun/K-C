@@ -50,7 +50,7 @@
 		if(!..(user, 2))
 			return
 		if(reagents && reagents.reagent_list.len)
-			to_chat(user, "<span class='notice'>It contains [reagents.total_volume] units of liquid.</span>")
+			to_chat(user, "<span class='notice'>It contains [reagents.total_volume] units of reagents.</span>")
 		else
 			to_chat(user, "<span class='notice'>It is empty.</span>")
 		if(!is_open_container())
@@ -205,6 +205,22 @@
 		..()
 		reagents.add_reagent("corporis", 60)
 		update_icon()
+
+/obj/item/weapon/reagent_containers/glass/beaker/purifvenenum
+	New()
+		..()
+		reagents.add_reagent("purifvenenum", 60)
+		update_icon()
+
+/obj/item/weapon/reagent_containers/glass/beaker/vial/impuri
+	New()
+		..()
+		reagents.add_reagent("corporispura", 15)
+
+/obj/item/weapon/reagent_containers/glass/beaker/vial/aurum
+	New()
+		..()
+		reagents.add_reagent("aurum", 15)
 
 /obj/item/weapon/reagent_containers/glass/bucket
 	desc = "It's a bucket."

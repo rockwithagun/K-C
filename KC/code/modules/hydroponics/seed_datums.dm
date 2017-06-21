@@ -1100,3 +1100,21 @@
 	set_trait(TRAIT_YIELD,-1)
 	set_trait(TRAIT_SPREAD,2)
 	set_trait(TRAIT_POTENCY,50)
+
+//Alchemical plants
+
+/datum/seed/alchemy/solis
+	name = "solis"
+	seed_name = "semina solis"
+	display_name = "cadit solis"
+	chems = list("nutrient" = list(1,5), "solis" = list(1,10))
+
+/datum/seed/alchemy/solis/New()
+	..()
+	set_trait(TRAIT_HARVEST_REPEAT,1)
+	set_trait(TRAIT_MATURATION,2)
+	set_trait(TRAIT_PRODUCTION,4)
+	set_trait(TRAIT_YIELD,1)
+	set_trait(TRAIT_POTENCY,10)
+	//set_trait(TRAIT_PRODUCT_ICON,"solis"
+	//set_trait(TRAIT_PLANT_ICON,"solis") sprites
