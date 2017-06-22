@@ -16,7 +16,7 @@
 
 	if(default_parry_check(user, attacker, damage_source) && prob(50))
 		user.visible_message("<span class='danger'>\The [user] parries [attack_text] with \the [src]!</span>")
-		playsound(user.loc, 'sound/weapons/punchmiss.ogg', 50, 1)
+		playsound(user.loc, 'sound/effects/parry.ogg', 50, 1)
 		return 1
 	return 0
 
