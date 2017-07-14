@@ -1,4 +1,10 @@
 
+/*Guide on alchemy reagents
+states is a associative list that changes the reagent into the next based on the type, use the defines in code/__defines/alchemy.dm
+Example being states = list(CALCINATION = "antitoxin", FILTRATION = "inaprovaline")
+state_change_ratio is a multiplier for any state change at all
+state_change_msg is another associative list; use it the same way you use states.
+*/
 /datum/reagent/solis
 	name = "solis"
 	id = "solis"
@@ -34,7 +40,7 @@
 	color = "#ff7de1"
 	overdose = REAGENTS_OVERDOSE
 
-/datum/reagent/corporispura/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/impuricorporis/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.heal_organ_damage(6.5 * removed, 0)
 
 /datum/reagent/argentum
