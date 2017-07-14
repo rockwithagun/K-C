@@ -522,6 +522,13 @@
 	item_state = "mayor"
 	armor = list(melee = 15, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 
+/obj/item/clothing/suit/king/ra
+	name = "royal alchemist's coat"
+	desc = "A blue dyed leather coat."
+	icon_state = "ra"
+	item_state = "ra"
+	armor = list(melee = 15, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+
 /obj/item/clothing/suit/king/apron
 	name = "apron"
 	desc = "A brown stained leather apron."

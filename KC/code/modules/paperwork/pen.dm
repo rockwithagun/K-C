@@ -10,8 +10,8 @@
  * Pens
  */
 /obj/item/weapon/pen
-	desc = "It's a normal black ink pen."
-	name = "pen"
+	desc = "It's a normal pencil."
+	name = "pencil "
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "pen"
 	item_state = "pen"

@@ -1,4 +1,5 @@
 /turf/simulated/floor/jungle
+	var/global/timeofday
 	var/bushes_spawn = 1
 	var/plants_spawn = 1
 	var/small_trees = 1
@@ -14,13 +15,25 @@
 	var/farmed = 0
 	light_color = null
 	light_power = 1
-	light_range = 5 //for some reason, range 1 doesn't apply at all.
+	light_range = 1 //for some reason, range 1 doesn't apply at all.
 	var/bushspawnchance = 35 //let's try it, why not
 
 /turf/simulated/floor/jungle/update_air_properties() //No, you can't flood the jungle with phoron silly.
 	return
 
 /turf/simulated/floor/jungle/New()
+	if(!timeofday) timeofday = pick(1,2,3)
+
+	switch(timeofday)
+		if(1)
+			light_range = 2
+			light_color = "#47476b"
+		if(2)
+			light_range = 4
+			light_color = "#ff9933"
+		if(3)
+			light_range = 6
+
 	if(icon_spawn_state)
 		icon_state = icon_spawn_state
 
@@ -261,8 +274,20 @@
 //King&Cunt
 
 /turf/simulated/floor/jungle/king/New()
+	if(!timeofday) timeofday = pick(1,2,3)
+
+	switch(timeofday)
+		if(1)
+			light_range = 2
+			light_color = "#47476b"
+		if(2)
+			light_range = 4
+			light_color = "#ff9933"
+		if(3)
+			light_range = 6
 
 	update_light()
+
 
 /turf/simulated/floor/jungle/king
 	name = "dirt"

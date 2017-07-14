@@ -1,5 +1,5 @@
 /datum/job/chief_engineer
-	title = "Worshipful Master"
+	title = "Worshipful Master Mason"
 	head_position = 1
 	department = "Engineering"
 	department_flag = ENG|COM
@@ -16,13 +16,13 @@
 	announced = 0
 
 /datum/job/engineer
-	title = "Mason Builder"
+	title = "Mason"
 	department = "Engineering"
 	department_flag = ENG
 	faction = "Station"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "the Worshipful Master"
+	supervisors = "the Worshipful Master Mason"
 	selection_color = "#5b4d20"
 	economic_modifier = 5
 	minimal_player_age = 0

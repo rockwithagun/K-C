@@ -1,9 +1,9 @@
 var/datum/antagonist/loyalists/loyalists
 
 /datum/antagonist/loyalists
-	id = MODE_LOYALIST
-	role_text = "Head Loyalist"
-	role_text_plural = "Loyalists"
+//	id = MODE_LOYALIST
+//	role_text = "Head Loyalist"
+//	role_text_plural = "Loyalists"
 	feedback_tag = "loyalist_objective"
 	antag_indicator = "hudheadloyalist"
 	welcome_text = "You belong to the Company, body and soul. Preserve its interests against the conspirators amongst the crew."

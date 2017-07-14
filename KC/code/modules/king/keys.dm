@@ -17,3 +17,13 @@
 	name = "gunsmith's key"
 	desc = "Used to unlock the gunsmith's backroom."
 	key_data = "d"
+
+/obj/item/weapon/key/tavern
+	name = "tavern key"
+	desc = "Used to unlock the tavern storage room."
+	key_data = "e"
+
+/obj/item/weapon/key/guardcaptain
+	name = "captain of the guard's key"
+	desc = "Used to unlock the Captain of the Guard's bedroom."
+	key_data = "f"

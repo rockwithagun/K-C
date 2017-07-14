@@ -24,17 +24,6 @@
 	alt_titles = list("Planter")
 	outfit_type = /decl/hierarchy/outfit/farmer
 
-/datum/job/innkeeper
-	title = "Innkeeper"
-	department = "Service"
-	department_flag = SRV
-	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Mayor"
-	selection_color = "#63472a"
-	outfit_type = /decl/hierarchy/outfit/innkeeper
-
 /datum/job/barkeep
 	title = "Barkeep"
 	department = "Service"

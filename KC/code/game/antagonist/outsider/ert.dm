@@ -1,9 +1,9 @@
 var/datum/antagonist/ert/ert
 
 /datum/antagonist/ert
-	id = MODE_ERT
-	role_text = "Emergency Responder"
-	role_text_plural = "Emergency Responders"
+//	id = MODE_ERT
+//	role_text = "Emergency Responder"
+//	role_text_plural = "Emergency Responders"
 	welcome_text = "As member of the Emergency Response Team, you answer only to your leader and company officials."
 	antag_text = "You are an <b>anti</b> antagonist! Within the rules, \
 		try to save the installation and its inhabitants from the ongoing crisis. \

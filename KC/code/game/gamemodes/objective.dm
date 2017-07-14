@@ -364,6 +364,26 @@ datum/objective/brig
 			return 0
 		return 0
 
+//KING - HAPPENS
+datum/objective/happens
+	var/already_completed = 0
+	explanation_text = "You want to be in the room where it happens. Take that as you will."
+
+	check_completion()
+		if(already_completed)
+			return 1
+
+		if(owner && owner.current)
+			if(owner.current.stat == DEAD)
+				return 0
+			// Make the actual required time a bit shorter than the official time
+			if(owner.is_happens(10 * 10 * 5))
+				already_completed = 1
+				return 1
+			return 0
+		return 0
+//
+
 // Harm a crew member, making an example of them
 datum/objective/harm
 	var/already_completed = 0
@@ -799,7 +819,7 @@ datum/objective/heist/salvage
 		return 1
 
 /datum/objective/cult/eldergod
-	explanation_text = "Summon Nar-Sie via the use of the appropriate rune (Hell join self). It will only work if nine cultists stand on and around it. The convert rune is join blood self."
+	explanation_text = "Summon Cthulhu via the use of the appropriate rune (Hell join self). It will only work if nine cultists stand on and around it. The convert rune is join blood self."
 
 /datum/objective/cult/eldergod/check_completion()
 	return (locate(/obj/singularity/narsie/large) in machines)

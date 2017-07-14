@@ -1,6 +1,6 @@
 /obj/item/weapon/melee/cultblade
 	name = "cult blade"
-	desc = "An arcane weapon wielded by the followers of Nar-Sie."
+	desc = "An arcane weapon wielded by the followers of Cthulhu Mythos."
 	icon_state = "cultblade"
 	item_state = "cultblade"
 	edge = 1
@@ -48,7 +48,7 @@
 /obj/item/clothing/head/culthood
 	name = "cult hood"
 	icon_state = "culthood"
-	desc = "A hood worn by the followers of Nar-Sie."
+	desc = "A hood worn by the followers of Cthulhu Mythos."
 	flags_inv = HIDEFACE
 	body_parts_covered = HEAD
 	armor = list(melee = 30, bullet = 10, laser = 5,energy = 5, bomb = 0, bio = 0, rad = 0)
@@ -59,7 +59,7 @@
 /obj/item/clothing/head/culthood/magus
 	name = "magus helm"
 	icon_state = "magus"
-	desc = "A helm worn by the followers of Nar-Sie."
+	desc = "A helm worn by the followers of Cthulhu Mythos."
 	flags_inv = HIDEFACE | BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
 
@@ -68,7 +68,7 @@
 
 /obj/item/clothing/suit/cultrobes
 	name = "cult robes"
-	desc = "A set of armored robes worn by the followers of Nar-Sie."
+	desc = "A set of armored robes worn by the followers of Cthulhu Mythos."
 	icon_state = "cultrobes"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	allowed = list(/obj/item/weapon/book/tome,/obj/item/weapon/melee/cultblade)
@@ -81,14 +81,14 @@
 
 /obj/item/clothing/suit/cultrobes/magusred
 	name = "magus robes"
-	desc = "A set of armored robes worn by the followers of Nar-Sie."
+	desc = "A set of armored robes worn by the followers of Cthulhu Mythos."
 	icon_state = "magusred"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 
 /obj/item/clothing/head/helmet/space/cult
 	name = "cult helmet"
-	desc = "A space worthy helmet used by the followers of Nar-Sie."
+	desc = "A space worthy helmet used by the followers of Cthulhu Mythos."
 	icon_state = "cult_helmet"
 	armor = list(melee = 60, bullet = 50, laser = 50,energy = 15, bomb = 30, bio = 30, rad = 30)
 	siemens_coefficient = 0
@@ -96,7 +96,7 @@
 /obj/item/clothing/suit/space/cult
 	name = "cult armour"
 	icon_state = "cult_armour"
-	desc = "A bulky suit of armour, bristling with spikes. It looks space proof."
+	desc = "A bulky suit of armour, bristling with spikes."
 	allowed = list(/obj/item/weapon/book/tome,/obj/item/weapon/melee/cultblade,/obj/item/weapon/tank/emergency,/obj/item/device/suit_cooling_unit)
 	armor = list(melee = 60, bullet = 50, laser = 50,energy = 15, bomb = 30, bio = 30, rad = 30)
 	siemens_coefficient = 0

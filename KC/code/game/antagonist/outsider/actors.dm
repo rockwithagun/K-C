@@ -1,12 +1,13 @@
 var/datum/antagonist/actor/actor
 
 /datum/antagonist/actor
-	id = MODE_ACTOR
-	role_text = "NanoTrasen Actor"
-	role_text_plural = "NanoTrasen Actors"
+//	id = MODE_ACTOR
+//	role_text = "NanoTrasen Actor"
+//	role_text_plural = "NanoTrasen Actors"
 	welcome_text = "You've been hired to entertain people through the power of television!"
 	landmark_id = "ActorSpawn"
 	id_type = /obj/item/weapon/card/id/syndicate
+
 
 	flags = ANTAG_OVERRIDE_JOB | ANTAG_SET_APPEARANCE | ANTAG_CHOOSE_NAME | ANTAG_RANDOM_EXCEPTED
 

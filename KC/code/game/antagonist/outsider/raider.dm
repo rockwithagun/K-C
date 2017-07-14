@@ -2,12 +2,12 @@ var/datum/antagonist/raider/raiders
 
 /datum/antagonist/raider
 	id = MODE_RAIDER
-	role_text = "Raider"
-	role_text_plural = "Raiders"
+	role_text = "Pirate Raider"
+	role_text_plural = "Pirate Raiders"
 	antag_indicator = "hudmutineer"
 	landmark_id = "voxstart"
-	welcome_text = "Use :H to talk on your encrypted channel."
-	flags = ANTAG_OVERRIDE_JOB | ANTAG_CLEAR_EQUIPMENT | ANTAG_CHOOSE_NAME | ANTAG_VOTABLE | ANTAG_SET_APPEARANCE | ANTAG_HAS_LEADER
+	welcome_text = "Get the goods."
+	flags = ANTAG_OVERRIDE_JOB | ANTAG_CLEAR_EQUIPMENT | ANTAG_CHOOSE_NAME | ANTAG_SET_APPEARANCE | ANTAG_HAS_LEADER
 	antaghud_indicator = "hudmutineer"
 
 	hard_cap = 6

@@ -7,7 +7,7 @@
 	icon_state = "bolt"
 	item_state = "bolt"
 	throwforce = 8
-	w_class = ITEM_SIZE_NORMAL
+	w_class = ITEM_SIZE_SMALL
 	sharp = 1
 	edge = 0
 	lock_picking_level = 3

@@ -28,7 +28,7 @@
 	economic_modifier = 7
 	outfit_type = /decl/hierarchy/outfit/job/doctorbarber
 
-//Chemist is a medical job damnit	//YEAH FUCK YOU SCIENCE	-Pete	//Guys, behave -Erro
+/*
 /datum/job/chemist
 	title = "Plague Doctor"
 	department = "Medical"
@@ -41,3 +41,4 @@
 	selection_color = "#013d3b"
 	economic_modifier = 5
 	outfit_type = /decl/hierarchy/outfit/job/plague
+*/

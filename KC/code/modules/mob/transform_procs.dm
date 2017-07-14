@@ -208,6 +208,27 @@
 	qdel(src)
 	return
 
+/mob/living/carbon/human/proc/werewolfize()
+	if (transforming)
+		return
+	for(var/obj/item/W in src)
+		drop_from_inventory(W)
+	regenerate_icons()
+	transforming = 1
+	canmove = 0
+	icon = null
+	invisibility = 101
+	for(var/t in organs)	//this really should not be necessary
+		qdel(t)
+
+	var/mob/living/simple_animal/hostile/werewolf/new_werewolf = new /mob/living/simple_animal/hostile/werewolf (loc)
+	new_werewolf.a_intent = I_HURT
+	new_werewolf.key = key
+
+	to_chat(new_werewolf, "<B>You are now a Werewolf!</B>")
+	qdel(src)
+	return
+
 /mob/living/carbon/human/Animalize()
 
 	var/list/mobtypes = typesof(/mob/living/simple_animal)

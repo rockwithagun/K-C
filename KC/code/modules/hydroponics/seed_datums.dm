@@ -322,7 +322,7 @@
 	seed_name = "chanterelle"
 	seed_noun = "spores"
 	display_name = "chanterelle mushrooms"
-	mutants = list("reishi","amanita","plumphelmet")
+	mutants = list("reishi")
 	chems = list("nutriment" = list(1,25))
 	splat_type = /obj/effect/plant
 	kitchen_tag = "mushroom"
@@ -361,7 +361,7 @@
 	name = "plumphelmet"
 	seed_name = "plump helmet"
 	display_name = "plump helmet mushrooms"
-	mutants = list("walkingmushroom","towercap")
+	mutants = list("towercap")
 	chems = list("nutriment" = list(2,10))
 	kitchen_tag = "plumphelmet"
 

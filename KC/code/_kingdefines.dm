@@ -14,4 +14,12 @@
 #define VAMP_FULL    4096
 #define VAMP_SILVER  8192
 
+//Wereboys
+#define WERE_POWER1  16392
+#define WERE_POWER2  32784
+#define WERE_POWER3  65568
+#define WERE_FULL    131136
+
 #define MODE_VAMPIRE "vampire"
+
+#define MODE_WEREWOLF "werewolf"

@@ -4,7 +4,7 @@ var/datum/antagonist/traitor/traitors
 /datum/antagonist/traitor
 	id = MODE_TRAITOR
 	protected_jobs = list("Security Officer", "Warden", "Detective", "Internal Affairs Agent", "Head of Security", "Captain")
-	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN | ANTAG_VOTABLE
+	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN
 
 /datum/antagonist/traitor/New()
 	..()

@@ -55,7 +55,7 @@
 	else
 		..()
 
-/obj/structure/smelter/object
+/obj/structure/smelters/object
 	name = "furnace"
 	desc = "The furnace wall, warm to the touch."
 	icon = 'icons/king/furnace.dmi'
@@ -97,7 +97,10 @@ var/list/techniques = list(
 	"Knife" = list("path" = /obj/item/weapon/material/sword/king/knife, "cost" = 3),
 	"Pickaxe" = list("path" = /obj/item/weapon/pickaxe/silver, "cost" = 7),
 	"Axe" = list("path" = /obj/item/weapon/material/twohanded/fireaxe, "cost" = 10),
-	"Rapier" = list("path" = /obj/item/weapon/material/sword/king/rapier, "cost" = 7)
+	"Rapier" = list("path" = /obj/item/weapon/material/sword/king/rapier, "cost" = 7),
+	"Long rifle ball" = list("path" = /obj/item/projectile/bullet/rifle/king, "cost" = 2),
+	"Short rifle ball" = list("path" = /obj/item/projectile/bullet/rifle/king/short, "cost" = 2),
+	"Flinklock ball" = list("path" = /obj/item/projectile/bullet/rifle/king/flintlock, "cost" = 1)
 	)
 
 

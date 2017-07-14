@@ -111,7 +111,7 @@
 	if(!cult.can_become_antag(target.mind, 1))
 		to_chat(target, "<span class='danger'>Are you going insane?</span>")
 	else
-		to_chat(target, "<span class='cult'>Do you want to join the cult of Nar'Sie? You can choose to ignore offer... <a href='?src=\ref[src];join=1'>Join the cult</a>.</span>")
+		to_chat(target, "<span class='cult'>Do you want to join the cult of Cthulhu Mythos? You can choose to ignore offer... <a href='?src=\ref[src];join=1'>Join the cult</a>.</span>")
 
 	spamcheck = 1
 	spawn(40)
@@ -172,7 +172,7 @@
 	else if(user.loc == get_turf(src))
 		user.say("Sas[pick("'","`")]so c'arta forbici!")
 		if(do_after(user, 30))
-			user.visible_message("<span class='warning'>\The [user] disappears in a flash of red light!</span>", "<span class='warning'>You feel as your body gets dragged into the dimension of Nar-Sie!</span>", "You hear a sickening crunch.")
+			user.visible_message("<span class='warning'>\The [user] disappears in a flash of red light!</span>", "<span class='warning'>You feel as your body gets dragged into the dimension of Cthulhu Mythos!</span>", "You hear a sickening crunch.")
 			user.forceMove(src)
 			showOptions(user)
 			var/warning = 0
@@ -183,7 +183,7 @@
 					leaveRune(user)
 					return
 				if(warning == 0)
-					to_chat(user, "<span class='warning'>You feel the immerse heat of the realm of Nar-Sie...</span>")
+					to_chat(user, "<span class='warning'>You feel the immerse heat of the realm of Cthulhu Mythos...</span>")
 					++warning
 				if(warning == 1 && user.getFireLoss() > 15)
 					to_chat(user, "<span class='warning'>Your burns are getting worse. You should return to your realm soon...</span>")
@@ -221,7 +221,7 @@
 	if(user.loc != src)
 		return
 	user.forceMove(get_turf(src))
-	user.visible_message("<span class='warning'>\The [user] appears in a flash of red light!</span>", "<span class='warning'>You feel as your body gets thrown out of the dimension of Nar-Sie!</span>", "You hear a pop.")
+	user.visible_message("<span class='warning'>\The [user] appears in a flash of red light!</span>", "<span class='warning'>You feel as your body gets thrown out of the dimension of Cthulhu Mythos!</span>", "You hear a pop.")
 
 /obj/effect/rune/tome
 	cultname = "summon tome"
@@ -773,7 +773,7 @@
 	for(var/mob/living/M in cultists)
 		M.say("Tok-lyr rqa'nap g[pick("'","`")]lt-ulotf!")
 		to_chat(M, "<span class='cult'>You are staring to tear the reality to bring Him back... stay around the rune!</span>")
-	log_and_message_admins_many(cultists, "started summoning Nar-sie.")
+	log_and_message_admins_many(cultists, "started summoning Cthulhu.")
 
 	var/area/A = get_area(src)
 	command_announcement.Announce("High levels of bluespace interference detected at \the [A]. Suspected wormhole forming. Investigate it immediately.")

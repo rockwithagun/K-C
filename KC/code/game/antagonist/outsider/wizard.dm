@@ -2,11 +2,11 @@ var/datum/antagonist/wizard/wizards
 
 /datum/antagonist/wizard
 	id = MODE_WIZARD
-	role_text = "Space Wizard"
-	role_text_plural = "Space Wizards"
+	role_text = "Wizard"
+	role_text_plural = "Wizards"
 	landmark_id = "wizard"
 	welcome_text = "You will find a list of available spells in your spell book. Choose your magic arsenal carefully.<br>In your pockets you will find a teleport scroll. Use it as needed."
-	flags = ANTAG_OVERRIDE_JOB | ANTAG_CLEAR_EQUIPMENT | ANTAG_CHOOSE_NAME | ANTAG_VOTABLE | ANTAG_SET_APPEARANCE
+	flags = ANTAG_OVERRIDE_JOB | ANTAG_CLEAR_EQUIPMENT | ANTAG_CHOOSE_NAME | ANTAG_SET_APPEARANCE
 	antaghud_indicator = "hudwizard"
 
 	hard_cap = 1

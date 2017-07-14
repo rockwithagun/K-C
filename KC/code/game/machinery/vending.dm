@@ -16,8 +16,8 @@
 	var/icon_deny //Icon_state when denying access
 
 	// Power
-	use_power = 1
-	idle_power_usage = 10
+//	use_power = 0
+//	idle_power_usage = 0
 	var/vend_power_usage = 150 //actuators and stuff
 
 	// Vending-related
@@ -179,7 +179,7 @@
 	if (I || istype(W, /obj/item/weapon/spacecash))
 		attack_hand(user)
 		return
-	else if(istype(W, /obj/item/weapon/screwdriver))
+	else if(istype(W, /obj/item/weapon/weldingtool))
 		src.panel_open = !src.panel_open
 		var/interact_sound = "[src.panel_open ? "open" : "close"]"
 		to_chat(user, "You [interact_sound] the maintenance panel.")
@@ -221,7 +221,7 @@
 		to_chat(usr, "\icon[cashmoney] <span class='warning'>That is not enough money.</span>")
 		return 0
 
-	visible_message("<span class='info'>\The [usr] inserts some cash into \the [src].</span>")
+	visible_message("<span class='info'>\The [usr] hands some cash to \the [src].</span>")
 	cashmoney.worth -= currently_vending.price
 
 	if(cashmoney.worth <= 0)
@@ -1047,3 +1047,48 @@
 					/obj/item/weapon/lipstick/jade = 100,
 					/obj/item/weapon/storage/wallet/poly = 600
 					)
+
+/obj/machinery/vending/merchant
+	name = "Dockhand"
+	desc = "He brings supplies from ships to sell."
+	product_slogans = "Oi, do you want to buy some wares?;\
+		Smoke now, and win the adoration of your peers.;\
+		They beat cancer centuries ago, so smoke away.;\
+		If you're not smoking, you must be joking."
+	vend_delay = 34
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "merchant"
+	products = list(/obj/item/weapon/storage/fancy/cigarettes = 5,
+					/obj/item/weapon/storage/fancy/cigarettes/luckystars = 5,
+					/obj/item/weapon/storage/fancy/cigarettes/jerichos = 5,
+					/obj/item/weapon/storage/fancy/cigarettes/menthols = 5,
+					/obj/item/weapon/storage/fancy/cigarettes/carcinomas = 5,
+					/obj/item/weapon/storage/fancy/cigarettes/professionals = 5,
+					/obj/item/weapon/storage/box/matches = 10,
+					/obj/item/weapon/flame/lighter/random = 4,
+					/obj/item/clothing/mask/smokable/ecig/util = 2,
+					///obj/item/clothing/mask/smokable/ecig/deluxe = 2,
+					/obj/item/clothing/mask/smokable/ecig/simple = 2,
+					/obj/item/weapon/reagent_containers/ecig_cartridge/med_nicotine = 10,
+					/obj/item/weapon/reagent_containers/ecig_cartridge/high_nicotine = 10,
+					/obj/item/weapon/reagent_containers/ecig_cartridge/orange = 10,
+					/obj/item/weapon/reagent_containers/ecig_cartridge/mint = 10,
+					/obj/item/weapon/reagent_containers/ecig_cartridge/watermelon = 10,
+					/obj/item/weapon/reagent_containers/ecig_cartridge/grape = 10)
+	prices = list(/obj/item/weapon/storage/fancy/cigarettes = 15,
+					/obj/item/weapon/storage/fancy/cigarettes/luckystars = 17,
+					/obj/item/weapon/storage/fancy/cigarettes/jerichos = 22,
+					/obj/item/weapon/storage/fancy/cigarettes/menthols = 18,
+					/obj/item/weapon/storage/fancy/cigarettes/carcinomas = 21,
+					/obj/item/weapon/storage/fancy/cigarettes/professionals = 23,
+					/obj/item/weapon/storage/box/matches = 1,
+					/obj/item/weapon/flame/lighter/random = 2,
+					/obj/item/clothing/mask/smokable/ecig/util = 100,
+					///obj/item/clothing/mask/smokable/ecig/deluxe = 300,
+					/obj/item/clothing/mask/smokable/ecig/simple = 150,
+					/obj/item/weapon/reagent_containers/ecig_cartridge/med_nicotine = 10,
+					/obj/item/weapon/reagent_containers/ecig_cartridge/high_nicotine = 15,
+					/obj/item/weapon/reagent_containers/ecig_cartridge/orange = 12,
+					/obj/item/weapon/reagent_containers/ecig_cartridge/mint = 12,
+					/obj/item/weapon/reagent_containers/ecig_cartridge/watermelon = 12,
+					/obj/item/weapon/reagent_containers/ecig_cartridge/grape = 12)

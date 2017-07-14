@@ -23,6 +23,8 @@
 		recipes += new/datum/stack_recipe("[display_name] blade", /obj/item/weapon/material/butterflyblade, 6, time = 20, one_per_turf = 0, on_floor = 1, supplied_material = "[name]")
 		recipes += new/datum/stack_recipe("[display_name] ashtray", /obj/item/weapon/material/ashtray, 2, one_per_turf = 1, on_floor = 1, supplied_material = "[name]")
 		recipes += new/datum/stack_recipe("[display_name] spoon", /obj/item/weapon/material/kitchen/utensil/spoon/plastic, 1, on_floor = 1, supplied_material = "[name]")
+		recipes += new/datum/stack_recipe("key", /obj/item/weapon/key, 1, time = 10, one_per_turf = 0, on_floor = 1)
+		recipes += new/datum/stack_recipe("[display_name] ring", /obj/item/clothing/ring/material, 1, on_floor = 1, supplied_material = "[name]")
 
 
 /material/steel/generate_recipes()
@@ -109,7 +111,6 @@ material/wood/generate_recipes()
 	recipes += new/datum/stack_recipe("beehive assembly", /obj/item/beehive_assembly, 4)
 	recipes += new/datum/stack_recipe("beehive frame", /obj/item/honey_frame, 1)
 	recipes += new/datum/stack_recipe("book shelf", /obj/structure/bookcase, 5, time = 15, one_per_turf = 1, on_floor = 1)
-	recipes += new/datum/stack_recipe("key", /obj/item/weapon/key, 1, time = 10, one_per_turf = 0, on_floor = 1)
 	recipes += new/datum/stack_recipe("table frame", /obj/structure/table, 1, time = 10, one_per_turf = 1, on_floor = 1)
 	recipes += new/datum/stack_recipe("rack", /obj/structure/table/rack, 1, time = 5, one_per_turf = 1, on_floor = 1)
 	recipes += new/datum/stack_recipe("long rifle stock", /obj/item/weapon/gunsmith/stock/long, 7, time = 10)
@@ -129,6 +130,9 @@ material/wood/generate_recipes()
 	recipes += new/datum/stack_recipe("brown pants commoner", /obj/item/clothing/under/king/common5, 5)
 	recipes += new/datum/stack_recipe("loincloth", /obj/item/clothing/under/king/common4, 3)
 	recipes += new/datum/stack_recipe("maid", /obj/item/clothing/under/king/maid, 8)
+	recipes += new/datum/stack_recipe("leather hat", /obj/item/clothing/head/king/generic, 2)
+	recipes += new/datum/stack_recipe("fancy leather hat", /obj/item/clothing/head/king/fancy, 4)
+	recipes += new/datum/stack_recipe("gus hat", /obj/item/clothing/head/king/gus, 3)
 
 
 /material/cardboard/generate_recipes()

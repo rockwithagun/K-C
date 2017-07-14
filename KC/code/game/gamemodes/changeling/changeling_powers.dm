@@ -302,7 +302,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	set category = "Changeling"
 	set name = "Lesser Form (1)"
 
-	var/datum/changeling/changeling = changeling_power(1,0,0)
+	var/datum/changeling/changeling = changeling_power(0,0,0)
 	if(!changeling)	return
 
 	if(src.has_brain_worms())
@@ -319,7 +319,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	H.visible_message("<span class='warning'>[H] transforms!</span>")
 	changeling.geneticdamage = 30
 	to_chat(H, "<span class='warning'>Our genes cry out!</span>")
-	H = H.monkeyize()
+	H = H.werewolfize()
 	feedback_add_details("changeling_powers","LF")
 	return 1
 
@@ -328,7 +328,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	set category = "Changeling"
 	set name = "Transform (1)"
 
-	var/datum/changeling/changeling = changeling_power(1,1,0)
+	var/datum/changeling/changeling = changeling_power(0,0,0)
 	if(!changeling)	return
 
 	var/list/names = list()

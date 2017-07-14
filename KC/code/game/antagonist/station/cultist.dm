@@ -24,14 +24,12 @@ var/datum/antagonist/cultist/cult
 	id = MODE_CULTIST
 	role_text = "Cultist"
 	role_text_plural = "Cultists"
-	restricted_jobs = list("Internal Affairs Agent", "Head of Security", "Captain")
-	protected_jobs = list("Security Officer", "Warden", "Detective")
-	blacklisted_jobs = list("AI", "Cyborg", "Chaplain")
+	blacklisted_jobs = list("Chaplain")
 	feedback_tag = "cult_objective"
 	antag_indicator = "hudcultist"
 	welcome_text = "You have a tome in your possession; one that will help you start the cult. Use it well and remember - there are others."
 	victory_text = "The cult wins! It has succeeded in serving its dark masters!"
-	loss_text = "The staff managed to stop the cult!"
+	loss_text = "The town managed to stop the cult!"
 	victory_feedback_tag = "win - cult win"
 	loss_feedback_tag = "loss - staff stopped the cult"
 	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN | ANTAG_VOTABLE

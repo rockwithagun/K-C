@@ -138,7 +138,7 @@
 
 //Bone Saw
 /obj/item/weapon/circular_saw/bonesaw
-	name = "circular saw"
+	name = "bone saw"
 	desc = "For heavy duty cutting."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "bonesaw"

@@ -27,7 +27,7 @@ var/list/ghost_traps
 	var/ghost_trap_message = "They are occupying a positronic brain now."
 	var/ghost_trap_role = "Positronic Brain"
 	var/can_set_own_name = TRUE
-	var/list_as_special_role = TRUE	// If true, this entry will be listed as a special role in the character setup
+	var/list_as_special_role = FALSE	// If true, this entry will be listed as a special role in the character setup
 
 	var/list/request_timeouts
 
@@ -134,6 +134,7 @@ var/list/ghost_traps
 	pref_check = BE_PLANT
 	ghost_trap_message = "They are occupying a living plant now."
 	ghost_trap_role = "Plant"
+	list_as_special_role = FALSE
 
 /datum/ghosttrap/plant/welcome_candidate(var/mob/target)
 	to_chat(target, "<span class='alium'><B>You awaken slowly, stirring into sluggish motion as the air caresses you.</B></span>")
@@ -191,6 +192,7 @@ datum/ghosttrap/drone/transfer_personality(var/mob/candidate, var/mob/living/sil
 	pref_check = BE_PAI
 	ghost_trap_message = "They are occupying a pAI now."
 	ghost_trap_role = "pAI"
+	list_as_special_role = FALSE
 
 datum/ghosttrap/pai/assess_candidate(var/mob/observer/ghost/candidate, var/mob/target)
 	return 0
@@ -207,6 +209,7 @@ datum/ghosttrap/pai/transfer_personality(var/mob/candidate, var/mob/living/silic
 	ghost_trap_message = "They are occupying a familiar now."
 	ghost_trap_role = "Wizard Familiar"
 	ban_checks = list(MODE_WIZARD)
+	list_as_special_role = FALSE
 
 /datum/ghosttrap/familiar/welcome_candidate(var/mob/target)
 	return 0

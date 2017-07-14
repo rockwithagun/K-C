@@ -1,9 +1,9 @@
 var/datum/antagonist/deathsquad/deathsquad
 
 /datum/antagonist/deathsquad
-	id = MODE_DEATHSQUAD
-	role_text = "Death Commando"
-	role_text_plural = "Death Commandos"
+//	id = MODE_DEATHSQUAD
+//	role_text = "Death Commando"
+//	role_text_plural = "Death Commandos"
 	welcome_text = "You work in the service of corporate Asset Protection, answering directly to the Board of Directors."
 	landmark_id = "Commando"
 	flags = ANTAG_OVERRIDE_JOB | ANTAG_OVERRIDE_MOB | ANTAG_HAS_NUKE | ANTAG_HAS_LEADER | ANTAG_RANDOM_EXCEPTED

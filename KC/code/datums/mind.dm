@@ -55,11 +55,13 @@
 	var/datum/faction/faction 			//associated faction
 	var/datum/changeling/changeling		//changeling holder
 	var/datum/vampire/vampire	//vamp holder; really have to clean this up someday
+	var/datum/werewolf/werewolf	//same
 
 	var/rev_cooldown = 0
 
 	// the world.time since the mob has been brigged, or -1 if not at all
 	var/brigged_since = -1
+	var/happens_since = -1
 
 	//put this here for easier tracking ingame
 	var/datum/money_account/initial_account
@@ -465,6 +467,26 @@
 
 	return (duration <= world.time - brigged_since)
 
+//KING
+/datum/mind/proc/is_happens(duration)
+	var/turf/T = current.loc
+	if(!istype(T))
+		happens_since = -1
+		return 0
+	var/is_currently_happens = 0
+	if(istype(T.loc,/area/jungle/crash_ship_clean))
+		is_currently_happens = 1
+
+	if(!is_currently_happens)
+		happens_since = -1
+		return 0
+
+	if(happens_since == -1)
+		happens_since = world.time
+
+	return (duration <= world.time - happens_since)
+//KING
+
 /datum/mind/proc/reset()
 	assigned_role =   null
 	special_role =    null
@@ -478,6 +500,7 @@
 	has_been_rev =    0
 	rev_cooldown =    0
 	brigged_since =   -1
+	happens_since =   -1
 
 //Antagonist role check
 /mob/living/proc/check_special_role(role)

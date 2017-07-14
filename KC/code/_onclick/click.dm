@@ -65,7 +65,7 @@
 		return
 
 	if(lying && istype(A, /turf/) && !istype(A, /turf/space/))
-		if(A.Adjacent(src) && !get_active_hand())
+		if(!get_active_hand())//Should make getting up stairs easier.
 			scramble(A)
 
 	if(stat || paralysis || stunned || weakened)
@@ -458,7 +458,7 @@ var/const/CLICK_HANDLER_ALL                  = (~0)
 
 /mob/proc/scramble(var/atom/A)
 	var/direction
-	if(stat || buckled || paralysis || stunned || sleeping || (status_flags & FAKEDEATH) || restrained() || (weakened > 5))
+	if(stat || buckled || paralysis || stunned || sleeping || (status_flags & FAKEDEATH) || restrained()) //|| (weakened > 5)) //You should be able to crawl when injured.
 		return
 	if(!istype(src.loc, /turf/) && !istype(src.loc, /obj/effect/decal/jungle/king/))
 		return
@@ -479,7 +479,7 @@ var/const/CLICK_HANDLER_ALL                  = (~0)
 		else		direction = WEST
 	if(direction)
 		scrambling = 1
-		spawn(10)//if(do_after(src, 5))
+		if(do_after(src, 10))//spawn(10)
 			Move(get_step(src,direction))
 			scrambling = 0
 			dir = 2

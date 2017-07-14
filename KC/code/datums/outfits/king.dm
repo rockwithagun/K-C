@@ -5,17 +5,16 @@
 	head = /obj/item/clothing/head/king/mayor
 	shoes = /obj/item/clothing/shoes/leather
 	belt = /obj/item/weapon/storage/bullet
-	l_hand = /obj/item/ammo_casing/king/flintlock
 	r_hand = /obj/item/weapon/key/castle
 	back = /obj/item/weapon/storage/backpack/satchel
-	backpack_contents = list(/obj/item/weapon/spacecash/bundle/c500 = 1)
+	backpack_contents = list(/obj/item/weapon/spacecash/bundle/c500 = 1, /obj/item/weapon/gun/projectile/shotgun/pump/boltaction/king/flintlock = 1)
 
 /decl/hierarchy/outfit/senioradvisor
 	name = "Senior Advisor"
 	uniform = /obj/item/clothing/under/king/hamilton
 	suit = /obj/item/clothing/suit/king/hamilton
 	shoes = /obj/item/clothing/shoes/leather
-	head = /obj/item/clothing/head/king/fancy
+	head = /obj/item/clothing/head/king/generic
 	gloves = /obj/item/clothing/gloves/thick/combat
 	belt = /obj/item/weapon/material/sword/king/rapier
 	back = /obj/item/weapon/storage/backpack/satchel
@@ -68,6 +67,7 @@
 	l_hand = /obj/item/clothing/accessory/wcoat
 	shoes = /obj/item/clothing/shoes/leather
 	back = /obj/item/weapon/storage/backpack/satchel
+	l_pocket = /obj/item/weapon/key/tavern
 	backpack_contents = list(/obj/item/weapon/spacecash/bundle/c50 = 1)
 
 /decl/hierarchy/outfit/farmer
@@ -161,6 +161,7 @@
 	gloves = /obj/item/clothing/gloves/guards
 	shoes = /obj/item/clothing/shoes/leather
 	r_pocket = /obj/item/weapon/handcuffs
+	l_pocket = /obj/item/weapon/key/guardcaptain
 	l_hand = /obj/item/weapon/key/jail
 	r_hand = /obj/item/ammo_casing/king
 	back = /obj/item/weapon/storage/backpack/satchel
@@ -175,7 +176,7 @@
 	shoes = /obj/item/clothing/shoes/leather
 	r_pocket = /obj/item/weapon/handcuffs
 	l_pocket = /obj/item/weapon/key/jail
-	l_hand = /obj/item/ammo_casing/king/flintlock
+	l_hand = /obj/item/weapon/gun/projectile/shotgun/pump/boltaction/king/flintlock
 	back = /obj/item/weapon/storage/backpack/satchel
 	backpack_contents = list(/obj/item/weapon/spacecash/bundle/c100 = 1)
 	belt = /obj/item/weapon/storage/bullet
@@ -201,10 +202,9 @@
 	shoes = /obj/item/clothing/shoes/leather
 	r_pocket = /obj/item/weapon/handcuffs
 	l_pocket = /obj/item/weapon/key/slayer
-	r_hand = /obj/item/ammo_casing/king/flintlock
 	l_hand = /obj/item/weapon/gun/launcher/crossbow
 	back = /obj/item/weapon/storage/backpack/satchel
-	backpack_contents = list(/obj/item/weapon/arrow = 6, /obj/item/weapon/spacecash/bundle/c100 = 1)
+	backpack_contents = list(/obj/item/weapon/arrow = 6, /obj/item/weapon/spacecash/bundle/c100 = 1, /obj/item/weapon/gun/projectile/shotgun/pump/boltaction/king/flintlock = 1)
 	belt = /obj/item/weapon/storage/bullet
 
 //DOC
@@ -212,7 +212,7 @@
 /decl/hierarchy/outfit/job/courtphysician
 	name = "Royal Alchemist"
 	uniform = /obj/item/clothing/under/king/heir2
-	suit = /obj/item/clothing/suit/storage/hooded/wintercoat/cloak
+	suit = /obj/item/clothing/suit/king/ra
 	head = /obj/item/clothing/head/king/fancy
 	gloves = /obj/item/clothing/gloves/botanic_leather
 	shoes = /obj/item/clothing/shoes/leather

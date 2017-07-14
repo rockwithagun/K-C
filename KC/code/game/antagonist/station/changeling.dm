@@ -1,12 +1,12 @@
 /datum/antagonist/changeling
-	id = MODE_CHANGELING
-	role_text = "Changeling"
-	role_text_plural = "Changelings"
+//	id = MODE_CHANGELING
+//	role_text = "Changeling"
+//	role_text_plural = "Changelings"
 	feedback_tag = "changeling_objective"
 	blacklisted_jobs = list("AI", "Cyborg")
 	protected_jobs = list("Security Officer", "Warden", "Detective", "Head of Security", "Captain")
 	welcome_text = "Use say \"#g message\" to communicate with your fellow changelings. Remember: you get all of their absorbed DNA if you absorb them."
-	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN | ANTAG_VOTABLE
+	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN
 	antaghud_indicator = "hudchangeling"
 
 	faction = "changeling"

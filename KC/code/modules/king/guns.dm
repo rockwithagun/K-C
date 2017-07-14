@@ -48,6 +48,7 @@
 	casingsound = 'sound/weapons/guns/misc/casingfall1.ogg'
 	pumpsound = 'sound/weapons/boltpump.ogg'
 	ammo_type = /obj/item/ammo_casing/king
+	w_class = ITEM_SIZE_NORMAL
 	max_shells = 1
 	var/datum/effect/effect/system/smoke_spread/bad/smoke
 
@@ -68,6 +69,7 @@
 	item_state = "mosin"
 	caliber = "ballshort"
 	ammo_type = /obj/item/ammo_casing/king
+	w_class = ITEM_SIZE_NORMAL
 
 /obj/item/weapon/gun/projectile/shotgun/pump/boltaction/king/flintlock
 	name = "flintlock"
@@ -77,7 +79,8 @@
 	item_state = "mosin"
 	caliber = "ballflintlock"
 	ammo_type = /obj/item/ammo_casing/king
-
+	w_class = ITEM_SIZE_SMALL
+	slot_flags = SLOT_BELT
 //
 
 /obj/item/weapon/storage/bullet

@@ -195,7 +195,7 @@
 
 // Chair types
 /obj/structure/bed/chair/wood
-	desc = "Old is never too old to not be in fashion."
+	desc = "Fresh wooden chair."
 	base_icon = "wooden_chair"
 	icon_state = "wooden_chair_preview"
 	material_alteration = MATERIAL_ALTERATION_NAME
@@ -223,18 +223,15 @@
 	desc = "It's a chair. Dumbass."
 	icon_state = "nicechair_preview"
 	base_icon = "nicechair"
-	buckle_movable = 1
 
 /obj/structure/bed/chair/wood/king/throne
 	name = "throne"
 	desc = "It looks like a throne, who would have guessed."
 	icon_state = "throne"
 	base_icon = "throne"
-	buckle_movable = 1
 
 /obj/structure/bed/chair/wood/king/throne/bone
 	name = "throne"
 	desc = "It looks like a throne made out of bones, who would have guessed."
 	icon_state = "bonethrone"
 	base_icon = "bonethrone"
-	buckle_movable = 1

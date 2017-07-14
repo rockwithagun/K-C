@@ -129,7 +129,7 @@
 			playsound(loc, 'sound/king/furnace.ogg', 100, 5, 5)
 			qdel(W)
 			sleep(100)
-			visible_message("<span class='notice'>The dough finished cooking.</span>")
+			visible_message("<span class='notice'>The egg finished cooking.</span>")
 			var/obj/item/weapon/reagent_containers/food/snacks/friedegg/I = new()
 			I.forceMove(get_turf(src))
 			busy = 0

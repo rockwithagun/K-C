@@ -168,6 +168,9 @@
 	if(r_ear && !skipears)
 		msg += "[T.He] [T.has] \icon[r_ear] \a [r_ear] on [T.his] right ear.\n"
 
+	if(mind && (mind.assigned_role))
+		msg += "[T.He] is a [mind.assigned_role].\n"
+
 	//ID
 	if(wear_id)
 		/*var/id

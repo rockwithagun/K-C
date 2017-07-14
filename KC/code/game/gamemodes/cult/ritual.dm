@@ -19,7 +19,7 @@
 	if(!iscultist(user))
 		to_chat(user, "An old, dusty tome with frayed edges and a sinister looking cover.")
 	else
-		to_chat(user, "The scriptures of Nar-Sie, The One Who Sees, The Geometer of Blood. Contains the details of every ritual his followers could think of. Most of these are useless, though.")
+		to_chat(user, "The scriptures of Cthulhu Mythos. Contains the details of every ritual his followers could think of. Most of these are useless, though.")
 
 /obj/item/weapon/book/tome/afterattack(var/atom/A, var/mob/user, var/proximity)
 	if(!proximity || !iscultist(user))
@@ -146,16 +146,13 @@ var/list/Tier1Runes = list(
 	/mob/proc/ajorney_rune,
 	/mob/proc/defile_rune,
 	/mob/proc/stun_imbue,
-	/mob/proc/emp_imbue,
 	/mob/proc/cult_communicate
 	)
 
 var/list/Tier2Runes = list(
 	/mob/proc/armor_rune,
 	/mob/proc/offering_rune,
-	/mob/proc/manifest_rune,
 	/mob/proc/drain_rune,
-	/mob/proc/emp_rune
 	)
 
 var/list/Tier3Runes = list(
@@ -218,23 +215,11 @@ var/list/Tier4Runes = list(
 
 	make_rune(/obj/effect/rune/offering, tome_required = 1)
 
-/mob/proc/manifest_rune()
-	set category = "Cult Magic"
-	set name = "Rune: Manifest"
-
-	make_rune(/obj/effect/rune/manifest, cost = 15)
-
 /mob/proc/drain_rune()
 	set category = "Cult Magic"
 	set name = "Rune: Blood Drain"
 
 	make_rune(/obj/effect/rune/drain, tome_required = 1)
-
-/mob/proc/emp_rune()
-	set category = "Cult Magic"
-	set name = "Rune: EMP"
-
-	make_rune(/obj/effect/rune/emp, tome_required = 1)
 
 /mob/proc/weapon_rune()
 	set category = "Cult Magic"
@@ -277,12 +262,6 @@ var/list/Tier4Runes = list(
 	set name = "Imbue: Stun"
 
 	make_rune(/obj/effect/rune/imbue/stun)
-
-/mob/proc/emp_imbue()
-	set category = "Cult Magic"
-	set name = "Imbue: EMP"
-
-	make_rune(/obj/effect/rune/imbue/emp)
 
 /mob/proc/cult_communicate()
 	set category = "Cult Magic"

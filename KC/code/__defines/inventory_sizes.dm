@@ -20,6 +20,6 @@
 //in exchange for being limited in the w_class of items that will fit
 #define base_storage_capacity(w_class) (7*(w_class-1))
 
-#define DEFAULT_BACKPACK_STORAGE base_storage_capacity(5)
+#define DEFAULT_BACKPACK_STORAGE base_storage_capacity(4)
 #define DEFAULT_LARGEBOX_STORAGE base_storage_capacity(4)
 #define DEFAULT_BOX_STORAGE      base_storage_capacity(3)

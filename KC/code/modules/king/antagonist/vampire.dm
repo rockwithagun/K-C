@@ -14,13 +14,13 @@ var/datum/antagonist/vampire/vamps
 	restricted_jobs = list("Chaplain")
 	protected_jobs = list(null)
 	welcome_text = "To bite someone, target the head and use harm intent with an empty hand. Drink blood to gain new powers. <br>You are weak to holy things and starlight. Avoid the Priest, the church and, especially, the Slayer."
-	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN | ANTAG_VOTABLE
+	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN
 	antag_indicator = "vampire"
 	uristantag = 1
 	initial_spawn_req = 1
 	initial_spawn_target = 1
 	hard_cap = 999	//should be able to multiply freely, if costs are met
-	hard_cap_round = 5
+	hard_cap_round = 3
 	faction = "undead"
 
 ///datum/antagonist/vampire/get_special_objective_text(var/datum/mind/player)

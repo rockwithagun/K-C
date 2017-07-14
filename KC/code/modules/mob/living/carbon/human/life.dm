@@ -101,6 +101,9 @@
 	if(mind && mind.vampire)
 		handle_vampire()
 
+	if(mind && mind.werewolf)
+		handle_werewolf()
+
 // Calculate how vulnerable the human is to under- and overpressure.
 // Returns 0 (equals 0 %) if sealed in an undamaged suit, 1 if unprotected (equals 100%).
 // Suitdamage can modifiy this in 10% steps.
