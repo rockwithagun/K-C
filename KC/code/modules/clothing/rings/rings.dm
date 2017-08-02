@@ -36,9 +36,7 @@
 		H.visible_message("<span class='warning'>\[H.name] seems to disappear before your eyes!</span>", "<span class='notice'>You feel completely invisible.</span>")
 
 /obj/item/clothing/ring/magic/dropped(var/mob/living/carbon/human/H)
-	if(!..())
-		return 0
-
+	..()
 	if(istype(H) && H.cloaked)
 		H.cloaked = FALSE
 		H.update_icons()

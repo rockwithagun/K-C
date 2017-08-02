@@ -273,7 +273,7 @@ var/list/mob/living/forced_ambiance_list = new
 	if(hum)
 		if(!L.client.ambience_playing)
 			L.client.ambience_playing = 1
-			L.playsound_local(T,sound('sound/ambience/shipambience.ogg', repeat = 1, wait = 0, volume = 25, channel = 2))
+			L.playsound_local(T,sound('sound/king/ocean1.ogg', repeat = 1, wait = 0, volume = 25, channel = 2))
 	else
 		if(L.client.ambience_playing)
 			L.client.ambience_playing = 0

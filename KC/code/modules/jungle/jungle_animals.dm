@@ -27,17 +27,13 @@
 	processing_objects.Remove(src)
 	..()
 
-/obj/effect/landmark/animal_spawner/panther
-	name = "panther spawner"
-	spawn_type = /mob/living/simple_animal/hostile/panther
+/obj/effect/landmark/animal_spawner/wolf
+	name = "wolf spawner"
+	spawn_type = /mob/living/simple_animal/hostile/wolf
 
 /obj/effect/landmark/animal_spawner/parrot
 	name = "parrot spawner"
 	spawn_type = /mob/living/simple_animal/parrot
-
-/obj/effect/landmark/animal_spawner/monkey
-	name = "monkey spawner"
-	spawn_type = /mob/living/carbon/human/monkey
 
 /obj/effect/landmark/animal_spawner/snake
 	name = "snake spawner"
@@ -143,6 +139,62 @@
 	. = ..()
 	if(.)
 		emote("hisses wickedly")
+
+/mob/living/simple_animal/hostile/snake/AttackingTarget()
+	. =..()
+	var/mob/living/L = .
+	if(istype(L))
+		L.apply_damage(rand(3,12), TOX)
+
+/mob/living/simple_animal/hostile/snake/AttackTarget()
+	..()
+	if(stance == HOSTILE_STANCE_ATTACKING && get_dist(src, target))
+		stalk_tick_delay -= 1
+		if(stalk_tick_delay <= 0)
+			src.loc = get_step_towards(src, target)
+			stalk_tick_delay = 3
+
+//******//
+// Wolf //
+//******//
+
+/mob/living/simple_animal/hostile/wolf
+	name = "wolf"
+	desc = "You should know what a wolf is."
+	icon = 'icons/mob/animal.dmi'
+	icon_state = "wolf"
+	icon_living = "wolf"
+	icon_dead = "wolf_dead"
+	icon_gib = null
+	speak_chance = 0
+	turns_per_move = 1
+	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	response_help = "pets the"
+	response_disarm = "gently pushes aside the"
+	response_harm = "hits the"
+	stop_automated_movement_when_pulled = 0
+	maxHealth = 25
+	health = 25
+
+	harm_intent_damage = 2
+	melee_damage_lower = 3
+	melee_damage_upper = 10
+	attacktext = "bites"
+	attack_sound = 'sound/weapons/bite.ogg'
+
+	layer = 3.1		//so they can stay hidde under the /obj/structure/bush
+	var/stalk_tick_delay = 3
+
+/mob/living/simple_animal/hostile/snake/ListTargets()
+	var/list/targets = list()
+	for(var/mob/living/carbon/human/H in view(src, 10))
+		targets += H
+	return targets
+
+/mob/living/simple_animal/hostile/snake/FindTarget()
+	. = ..()
+	if(.)
+		emote("growls loudly")
 
 /mob/living/simple_animal/hostile/snake/AttackingTarget()
 	. =..()

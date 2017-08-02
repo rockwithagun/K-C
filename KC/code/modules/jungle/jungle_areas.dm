@@ -19,6 +19,10 @@
 	dynamic_lighting = 1
 	luminosity = 1
 	base_turf = /turf/simulated/floor/jungle/clear/grass1
+	ambience = list(
+		'sound/king/ocean1.ogg',
+		'sound/king/ocean2.ogg'
+	)
 
 /area/jungle/explored
 	icon_state = "area2"

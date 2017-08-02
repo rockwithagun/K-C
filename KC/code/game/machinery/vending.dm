@@ -16,9 +16,9 @@
 	var/icon_deny //Icon_state when denying access
 
 	// Power
-//	use_power = 0
-//	idle_power_usage = 0
-	var/vend_power_usage = 150 //actuators and stuff
+	use_power = 0
+	idle_power_usage = 0
+	var/vend_power_usage = 0 //actuators and stuff
 
 	// Vending-related
 	var/active = 1 //No sales pitches if off!

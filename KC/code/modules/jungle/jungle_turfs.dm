@@ -330,6 +330,22 @@
 	icon = 'icons/king/Cobblestone.dmi'
 	icon_state = "slab"
 
+/turf/simulated/floor/jungle/king/cobble/teleport1
+	Entered(atom/movable/A)
+		if(ismob(A))
+			var/mob/M = A
+			if(M.client)
+				M.loc = locate(2,90,5)
+		return ..()
+
+/turf/simulated/floor/jungle/king/cobble/teleport2
+	Entered(atom/movable/A)
+		if(ismob(A))
+			var/mob/M = A
+			if(M.client)
+				M.loc = locate(149,130,2)
+		return ..()
+
 
 obj/effect/decal/jungle/king/grass
 	name = "grass"
